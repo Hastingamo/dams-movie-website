@@ -2,9 +2,9 @@ import React from "react";
 
 function PIcs(props) {
   return (
-    <div className="h-[24.18rem] bg-[#1403037e] md:ml-3 md:h-[28.6rem] sm:bg-[#1403037e] rounded-lg lg:ml-10 lg:h-[35rem]">
+    <div className="h-[24.18rem] bg-[#1403037e] xm:h-[26rem] md:ml-3 md:h-[28.6rem] sm:bg-[#1403037e] rounded-lg lg:ml-10 lg:h-[35rem]">
       <img
-        className="w-[25.3rem] h-[12.8rem] rounded-lg md:w-[14.5rem] md:h-[16.98rem] lg:w-[15rem] lg:h-[22rem]"
+        className="w-[25.3rem] h-[12.8rem] rounded-lg  xm:w-[10rem] md:w-[14.5rem] md:h-[16.98rem] lg:w-[15rem] lg:h-[22rem]"
         src={props.img}
         alt=""
       />
