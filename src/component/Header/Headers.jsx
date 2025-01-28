@@ -11,7 +11,7 @@ function Headers() {
           <Link to="Movies">Movies</Link>
         </nav>
       </header>
-      <header className=" h-10 w-full bg-red-500 sm:hidden">
+      <header className=" h-10 w-full bg-red-500 xs:w-[20rem] sm:hidden">
           <h1>Dams</h1>
       </header>
     </>
