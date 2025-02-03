@@ -41,7 +41,7 @@ function Home() {
         : window.innerWidth > 900
         ? 3
         : window.innerWidth > 750
-        ? 3 // If window width is between 768px and 1200px, show 3 slides
+        ? 2 // If window width is between 768px and 1200px, show 3 slides
         : window.innerWidth > 500
         ? 3
         : window.innerWidth > 400
@@ -110,7 +110,9 @@ function Home() {
           title="kingdom of the planent of the apes"
           details="images/info.png"
           detail='espisode & info'
+          likes="images/like.png"
           like='like'
+          dislikes="images/dontlike.png"
           dislike='dislike'
           love='love'
         />
