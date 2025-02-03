@@ -1,15 +1,15 @@
 function MiniBar(props) {
   return (
     <>
-      <div className="flex flex-col bg-white w-28 h-52 md:w-[10rem] md:h-[23rem] lg:w-[14rem] lg:h-[30rem] xl:w-[19.063rem] xl:h-[15.938rem]">
+      <div className="flex flex-col bg-white w-28 h-52 md:w-[10rem] md:h-[23rem] lg:w-[14rem] lg:h-[30rem] xl:w-[15.063rem] xl:h-[25.938rem]">
         <img 
-            className="w-4 h-4 ml-20 md:ml-32 md:w-6 md:h-6 lg:w-5 lg:h-5 lg:ml-48 xl:w-5 xl:h-5 xl:ml-64"
+            className="w-4 h-4 ml-20 md:ml-32 md:w-6 md:h-6 lg:w-5 lg:h-5 lg:ml-48 xl:w-5 xl:h-5 xl:ml-52"
             // eslint-disable-next-line react/prop-types
             src={props.cancel} 
             alt="" />
             
         <h1 className="text-[0.8rem] ml-2 md:text-2xl lg:ml-5 xl:ml-5 lg:text-[1.6rem] xl:text-3xl" >{props.title}</h1>
-        <div className="flex flex-row gap-4 md:mt-4 xl:mt-2">
+        <div className="flex flex-row gap-4 md:mt-4">
           <img 
             className="w-4 h-4 mt-4 md:w-6 md:h-6 lg:w-5 lg:h-5 lg:mt-5 xl:w-5 xl:h-5 ml-2 " 
             // eslint-disable-next-line react/prop-types
