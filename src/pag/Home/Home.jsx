@@ -2,6 +2,7 @@ import PIcs from "../../component/continuePic/PIcs";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import MiniBar from "../../component/miniBar/MiniBar";
 // import { useState, useEffect } from 'react';
 
 function Home() {
@@ -36,7 +37,7 @@ function Home() {
     speed: 700,
     slidesToShow:
       window.innerWidth > 1100
-        ? 4 // If window width is greater than 1200px, show 4 slides
+        ? 4// If window width is greater than 1200px, show 4 slides
         : window.innerWidth > 900
         ? 3
         : window.innerWidth > 750
@@ -49,7 +50,7 @@ function Home() {
   };
   return (
     <>
-      <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] bg-[#808080] md:overflow-x-hidden xs:w-[20rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[32.8rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.5rem]">
+      <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] bg-[#808080] md:overflow-x-hidden xs:w-[26rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[32.8rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.5rem]">
         <img
           src="images/Kingdom of the Planet of the Apes.png"
           className="w-full sm:w-[99%] sm:h-[100%] md:w-full md:h-full"
@@ -104,6 +105,16 @@ function Home() {
             />
           </Slider>
         </div>
+        <MiniBar
+          cancel="images/cancel.png"
+          title="kingdom of the planent of the apes"
+          details="images/info.png"
+          detail='espisode & info'
+          like='like'
+          dislike='dislike'
+          love='love'
+        />
+        <h1>the boy</h1>
       </div>
     </>
   );
