@@ -1,6 +1,11 @@
-import React from "react";
-
+import MiniBar from "../miniBar/MiniBar";
+import { useState } from "react";
 function PIcs(props) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => setIsModalOpen(true)
+  
   return (
     <div className="h-[24.18rem] bg-[#1403037e] xm:h-[26rem] md:ml-3 md:h-[28.6rem] sm:bg-[#1403037e] rounded-lg lg:ml-10 lg:h-[35rem]">
       <img
@@ -15,11 +20,23 @@ function PIcs(props) {
 
       <div className="flex flex-row gap-10 xs:gap-8 md:gap-24 lg:gap-16 xl:gap-24">
         <img className="ml-4 w-[2rem] h-[2rem]" src={props.imgs3} alt="" />
-        <img
-          className=" w-[5rem] h-[4rem]" 
-          src={props.imgss}
-          alt="" 
-        />
+        <div  onClick={openModal}>
+        {isModalOpen && (
+          <MiniBar
+            onClose={closeModal}
+            cancel="images/cancel.png"
+            title="kingdom of the planent of the apes"
+            details="images/info.png"
+            detail="espisode & info"
+            likes="images/like.png"
+            like="like"
+            dislikes="images/dontlike.png"
+            dislike="dislike"
+            love="love"
+          />
+        )}
+        <img className="w-5 h-5" src="images/dots.png"></img>
+      </div>
       </div>
     </div>
   );

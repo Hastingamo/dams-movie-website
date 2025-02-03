@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import MiniBar from "../../component/miniBar/MiniBar";
+import { useState } from "react";
 // import { useState, useEffect } from 'react';
 
 function Home() {
@@ -37,7 +38,7 @@ function Home() {
     speed: 700,
     slidesToShow:
       window.innerWidth > 1100
-        ? 4// If window width is greater than 1200px, show 4 slides
+        ? 4 // If window width is greater than 1200px, show 4 slides
         : window.innerWidth > 900
         ? 3
         : window.innerWidth > 750
@@ -48,6 +49,10 @@ function Home() {
         ? 2 // If window width is between 480px and 768px, show 2 slides
         : 2,
   };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => setIsModalOpen(true);
   return (
     <>
       <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] bg-[#808080] md:overflow-x-hidden xs:w-[26rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[32.8rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.5rem]">
@@ -105,19 +110,27 @@ function Home() {
             />
           </Slider>
         </div>
-        <MiniBar
-          cancel="images/cancel.png"
-          title="kingdom of the planent of the apes"
-          details="images/info.png"
-          detail='espisode & info'
-          likes="images/like.png"
-          like='like'
-          dislikes="images/dontlike.png"
-          dislike='dislike'
-          love='love'
-        />
-        <h1>the boy</h1>
       </div>
+      <div  onClick={openModal}>
+        {isModalOpen && (
+          <MiniBar
+            className="hidden"
+            onClose={closeModal}
+            cancel="images/cancel.png"
+            title="kingdom of the planent of the apes"
+            details="images/info.png"
+            detail="espisode & info"
+            likes="images/like.png"
+            like="like"
+            dislikes="images/dontlike.png"
+            dislike="dislike"
+            love="love"
+          />
+        )}
+        <img className="w-5 h-5" src="images/dots.png"></img>
+      </div>
+      <MiniBar isOpen={isModalOpen} closeModal={closeModal} />
+
     </>
   );
 }
