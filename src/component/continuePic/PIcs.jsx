@@ -1,11 +1,6 @@
+import React from "react";
 import MiniBar from "../miniBar/MiniBar";
-import { useState } from "react";
 function PIcs(props) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const closeModal = () => setIsModalOpen(false);
-  const openModal = () => setIsModalOpen(true)
-  
   return (
     <div className="h-[24.18rem] bg-[#1403037e] xm:h-[26rem] md:ml-3 md:h-[28.6rem] sm:bg-[#1403037e] rounded-lg lg:ml-10 lg:h-[35rem]">
       <img
@@ -16,27 +11,27 @@ function PIcs(props) {
       <h1 className="text-2xl ml-4 mt-2 italic md:ml-10 md:text-3xl lg:ml-10 lg:text-4xl">
         {props.name}
       </h1>
-      <img className="ml-2 w-[9rem] h-[3rem] xs:w-[6.6rem] md:ml-6 md:w-[11rem] lg:w-[9rem] xl:w-44" src={props.imgs2} alt="" />
+      <img
+        className="ml-2 w-[9rem] h-[3rem] xs:w-[6.6rem] md:ml-6 md:w-[11rem] lg:w-[9rem] xl:w-44"
+        src={props.imgs2}
+        alt=""
+      />
 
       <div className="flex flex-row gap-10 xs:gap-8 md:gap-24 lg:gap-16 xl:gap-24">
         <img className="ml-4 w-[2rem] h-[2rem]" src={props.imgs3} alt="" />
-        <div  onClick={openModal}>
-        {isModalOpen && (
-          <MiniBar
-            onClose={closeModal}
-            cancel="images/cancel.png"
-            title="kingdom of the planent of the apes"
-            details="images/info.png"
-            detail="espisode & info"
-            likes="images/like.png"
-            like="like"
-            dislikes="images/dontlike.png"
-            dislike="dislike"
-            love="love"
-          />
-        )}
-        <img className="w-5 h-5" src="images/dots.png"></img>
-      </div>
+        {/* <img className="w-5 h-5" src="images/dots.png"></img> */}
+        <MiniBar 
+          cancel="images/cancel.png"
+          modalId={"myModal"}
+          title="kingdom of the planent of the apes"
+          details="images/info.png"
+          detail="espisode & info"
+          likes="images/like.png"
+          like="like"
+          dislikes="images/dontlike.png"
+          dislike="dislike"
+          love="love"
+        />
       </div>
     </div>
   );
