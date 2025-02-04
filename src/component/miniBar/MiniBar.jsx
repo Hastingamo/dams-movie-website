@@ -33,7 +33,7 @@ const MiniBar = ({
       {isModalOpen && (
         <div
           id={modalId}
-          className="inset-0 backdrop-blur-sm bg-opacity-30 bg-black fixed flex justify-center items-center"
+          className="inset-0 backdrop-blur-sm bg-opacity-30 bg-black fixed"
         >
           <div className="flex flex-col w-28 h-52 mt-52 bg-white md:w-[10rem] md:h-[23rem] lg:w-[14rem] lg:h-[30rem] xl:w-[15.063rem] xl:h-[25.938rem]">
             <img
