@@ -35,10 +35,10 @@ const MiniBar = ({
           id={modalId}
           className="inset-0 backdrop-blur-sm bg-opacity-30 bg-black fixed"
         >
-          <div className="flex flex-col w-28 h-52 mt-52 bg-white md:w-[10rem] md:h-[23rem] lg:w-[14rem] lg:h-[30rem] xl:w-[15.063rem] xl:h-[25.938rem]">
+          <div className="flex flex-col w-[24.rem] h-52 mt-52 bg-white md:w-[32.8rem] md:h-[23rem] lg:w-[49rem] lg:h-[30rem] xl:w-[70rem] xl:h-[25.938rem]">
             <img
               onClick={closeModal}
-              className="w-4 h-4 ml-20 md:ml-32 md:w-6 md:h-6 lg:w-5 lg:h-5 lg:ml-48 xl:w-5 xl:h-5 xl:ml-52"
+              className="w-4 h-4 ml-[22.rem] md:ml-[30rem] md:w-6 md:h-6 lg:w-5 lg:h-5 lg:ml-[47rem] xl:w-5 xl:h-5 xl:ml-[68rm]"
               src={cancel}
               alt=""
             />
