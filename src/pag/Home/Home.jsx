@@ -2,7 +2,6 @@ import PIcs from "../../component/continuePic/PIcs";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import MiniBar from "../../component/miniBar/MiniBar";
 // import { useState, useEffect } from 'react';
 
 function Home() {
