@@ -17,7 +17,7 @@ function Movies() {
         : window.innerWidth > 750
         ? 2 // If window width is between 768px and 1200px, show 3 slides
         : window.innerWidth > 500
-        ? 4
+        ? 3
         : window.innerWidth > 400
         ? 2 // If window width is between 480px and 768px, show 2 slides
         : 2,
@@ -48,7 +48,7 @@ function Movies() {
           />
         </div>
         <h1 className="mt-4 ml-4 text-2xl text-white">Popular</h1>
-        <div className="">
+        <div className="ml-12">
           <Slider {...settings}>
             <RotatingCard
               Captainmarvel="images/Captain.png"
