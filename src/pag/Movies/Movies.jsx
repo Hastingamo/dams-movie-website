@@ -17,7 +17,7 @@ function Movies() {
         : window.innerWidth > 750
         ? 2 // If window width is between 768px and 1200px, show 3 slides
         : window.innerWidth > 500
-        ? 3
+        ? 4
         : window.innerWidth > 400
         ? 2 // If window width is between 480px and 768px, show 2 slides
         : 2,
