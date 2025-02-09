@@ -88,6 +88,46 @@ function Movies() {
             />
           </Slider>
         </div>
+        <div className="ml-12">
+          <Slider {...settings}>
+            <RotatingCard
+              Captainmarvel="images/Captain.png"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/Captain.png"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/Captain.png"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/Captain.png"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/Captain.png"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/Captain.png"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+          </Slider>
+        </div>
       </div>
     </>
   );
