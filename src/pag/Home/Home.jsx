@@ -50,7 +50,7 @@ function Home() {
   };
   return (
     <>
-      <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] bg-[#808080] md:overflow-x-hidden xs:w-[26rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[32.8rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70rem]">
+      <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] bg-[#808080] md:overflow-x-hidden xs:w-[26rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[32.8rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem]">
         <img
           src="images/Kingdom of the Planet of the Apes.png"
           className="w-full sm:w-[99%] sm:h-[100%] md:w-full md:h-full"
@@ -106,7 +106,7 @@ function Home() {
           </Slider>
         </div>
       </div>
-      <MiniBar
+      {/* <MiniBar
         cancel="images/cancel.png"
         modalId={"myModal"}
         // ModalId="kingdom of the planent of the apes"
@@ -117,7 +117,7 @@ function Home() {
         dislikes="images/dontlike.png"
         dislike="dislike"
         love="love"
-      />
+      /> */}
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const MiniBar = ({
   cancel,
@@ -24,14 +24,37 @@ const MiniBar = ({
     // modal?.showModal();
     setIsModalOpen(true);
   };
+  const handleOutsideClick = (e) => {
+    if (e.target === e.currentTarget) {
+      closeModal();
+    }
+  };
+  useEffect(() => {
+    if (isModalOpen) {
+      // Prevent scrolling when modal is open
+      document.body.style.overflow = "hidden";
+    } else {
+      // Allow scrolling when modal is closed
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isModalOpen]);
 
   // Close the modal if the user clicks outside the modal
   return (
     <>
-      <img onClick={openModal} className="w-5 h-5" src="images/dots.png" alt="" />
+      <img
+        onClick={openModal}
+        className="w-5 h-5"
+        src="images/dots.png"
+        alt=""
+      />
 
       {isModalOpen && (
         <div
+          onClick={handleOutsideClick}
           id={modalId}
           className="inset-0 backdrop-blur-sm bg-opacity-30 bg-black fixed"
         >

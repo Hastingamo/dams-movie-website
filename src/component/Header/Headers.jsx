@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function Headers() {
   return (
@@ -12,10 +12,11 @@ function Headers() {
         </nav>
       </header>
       <header className=" h-10 w-full bg-red-500 xs:w-[26rem] xm:w-[33.6rem] sm:hidden">
-          <h1>Dams</h1>
+        <h1 className="flex justify-center items-center">Dams</h1>
       </header>
+
     </>
-  )
+  );
 }
 
-export default Headers
+export default Headers;
