@@ -3,6 +3,7 @@ import RotatingCard from "../../component/RotatingCard/RotatingCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import SearchBar from "../../component/SearchBar/SearchBar";
 function Series() {
   const settings = {
     dots: true,
@@ -87,6 +88,7 @@ function Series() {
             />
           </Slider>
         </div>
+        {/* <SearchBar/> */}
       </div>
     </>
   );
