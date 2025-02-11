@@ -11,7 +11,7 @@ function Headers() {
           <Link to="Movies">Movies</Link>
         </nav>
       </header>
-      <header className=" h-10 w-full bg-red-500 flex flex-row xs:w-[26rem] xm:w-[33.6rem] sm:hidden">
+      <header className=" h-10 w-full bg-red-500 flex flex-row xs:w-[27rem] xm:w-[33.6rem] sm:hidden">
         {/* <h1 className="flex justify-center items-center">Dams</h1> */}
         <h1>Dams</h1>
         <Link to="/">Home</Link>
