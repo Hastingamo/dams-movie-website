@@ -3,6 +3,7 @@ import RotatingCard from "../../component/RotatingCard/RotatingCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import SearchBar from "../../component/SearchBar/SearchBar";
 
 function Movies() {
   const settings = {
@@ -28,9 +29,9 @@ function Movies() {
         <div className="flex flex-row mt-4 ml-5 md:ml-10 gap-10 lg:gap-52">
           <div>
             <input
-              placeholder="search"
               className="border-black border-solid border rounded p-1 text-black xm:text-2xl md:text-2xl md:p-2"
-            ></input>
+              placeholder="search"
+            />
             <img
               className="w-5 h-5 absolute top-7 left-[11rem] xm:left-[16rem] md:left-[18rem] md:w-8 md:h-8"
               src="images/loupe.png"
@@ -51,7 +52,7 @@ function Movies() {
         <div className="ml-12">
           <Slider {...settings}>
             <RotatingCard
-              Captainmarvel="images/Captain.png"
+              Captainmarvel="images/Venom.jpeg"
               info="images/info.png"
               love="images/info.png"
               share="images/info.png"
@@ -63,19 +64,102 @@ function Movies() {
               share="images/info.png"
             />
             <RotatingCard
-              Captainmarvel="images/Captain.png"
+              Captainmarvel="images/Kingdom of the Planet of the Apes.png"
               info="images/info.png"
               love="images/info.png"
               share="images/info.png"
             />
             <RotatingCard
-              Captainmarvel="images/Captain.png"
+              Captainmarvel="images/Deadpool.jpeg"
               info="images/info.png"
               love="images/info.png"
               share="images/info.png"
             />
             <RotatingCard
-              Captainmarvel="images/Captain.png"
+              Captainmarvel="images/carey.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/Rebel.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+          </Slider>
+        </div>
+        <h1 className="mt-4 ml-4 text-2xl text-white">For You</h1>
+
+        <div className="ml-12">
+          <Slider {...settings}>
+            <RotatingCard
+              Captainmarvel="images/carey.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/Rebel.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/RebelRidge.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/TheIdeaOfYou.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/YourFault.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/aTrueGentleman.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+          </Slider>
+        </div>
+        <h1 className="mt-4 ml-4 text-2xl text-white">Action</h1>
+        <div className="ml-12">
+          <Slider {...settings}>
+            <RotatingCard
+              Captainmarvel="images/RebelRidge.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/UGLIES.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/BackToAction.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/Divergent.jpeg"
+              info="images/info.png"
+              love="images/info.png"
+              share="images/info.png"
+            />
+            <RotatingCard
+              Captainmarvel="images/Batman.jpeg"
               info="images/info.png"
               love="images/info.png"
               share="images/info.png"
@@ -88,40 +172,41 @@ function Movies() {
             />
           </Slider>
         </div>
+        <h1 className="mt-4 ml-4 text-2xl text-white">Romantic</h1>
         <div className="ml-12">
           <Slider {...settings}>
             <RotatingCard
-              Captainmarvel="images/Captain.png"
+              Captainmarvel="images/tearSmith.jpeg"
               info="images/info.png"
               love="images/info.png"
               share="images/info.png"
             />
             <RotatingCard
-              Captainmarvel="images/Captain.png"
+              Captainmarvel="images/Challengers.jpeg"
               info="images/info.png"
               love="images/info.png"
               share="images/info.png"
             />
             <RotatingCard
-              Captainmarvel="images/Captain.png"
+              Captainmarvel="images/TheIdeaOfYou.jpeg"
               info="images/info.png"
               love="images/info.png"
               share="images/info.png"
             />
             <RotatingCard
-              Captainmarvel="images/Captain.png"
+              Captainmarvel="images/Upgraded.jpeg"
               info="images/info.png"
               love="images/info.png"
               share="images/info.png"
             />
             <RotatingCard
-              Captainmarvel="images/Captain.png"
+              Captainmarvel="images/aTrueGentleman.jpeg"
               info="images/info.png"
               love="images/info.png"
               share="images/info.png"
             />
             <RotatingCard
-              Captainmarvel="images/Captain.png"
+              Captainmarvel="images/YourFault.jpeg"
               info="images/info.png"
               love="images/info.png"
               share="images/info.png"

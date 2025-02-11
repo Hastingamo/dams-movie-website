@@ -3,6 +3,7 @@ import Home from "./pag/Home/Home"
 import Movies from "./pag/Movies/Movies"
 import Series from "./pag/Series/Series"
 import Headers from "./component/Header/Headers"
+import Footer from "./component/Footer/Footer"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="Movies" element={<Movies/>}></Route>
         <Route path="Series" element={<Series/>}></Route>
       </Routes>
+      <Footer/>
     </>
   )
 }
