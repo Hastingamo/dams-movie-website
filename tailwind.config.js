@@ -9,6 +9,7 @@ export default {
       screens: {
         'xs': '400px',
         'xm': '500px',
+        'xlg': '1400px',
       },
       inset: {
         'by': '10000px'

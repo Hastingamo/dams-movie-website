@@ -11,8 +11,10 @@ function Movies() {
     infinite: false,
     speed: 700,
     slidesToShow:
-      window.innerWidth > 1100
-        ? 4 // If window width is greater than 1200px, show 4 slides
+      window.innerWidth > 1400
+        ? 5 // If window width is greater than 1200px, show 4 slides
+        : window.innerWidth >1100
+        ? 4
         : window.innerWidth > 900
         ? 3
         : window.innerWidth > 750
@@ -20,12 +22,12 @@ function Movies() {
         : window.innerWidth > 500
         ? 3
         : window.innerWidth > 400
-        ? 2 // If window width is between 480px and 768px, show 2 slides
+        ? 3 // If window width is between 480px and 768px, show 2 slides
         : 2,
   };
   return (
     <>
-      <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] bg-[#808080] md:overflow-x-hidden xs:w-[26rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[33.5rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem]">
+      <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] bg-[#808080] md:overflow-x-hidden xs:w-[26rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[33.5rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem] xlg:w-[90rem]">
         <div className="flex flex-row mt-4 ml-5 md:ml-10 gap-10 lg:gap-52">
           <div>
             <input
