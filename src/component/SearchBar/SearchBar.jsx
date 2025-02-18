@@ -1,17 +1,23 @@
-import { useState } from "react";
-import Records from "../user/User.json";
+import Input from "../list/Input";
+import List from "../list/List";
 function SearchBar() {
-  const [query, setQuery] = useState("");
+  const [inputText, setInputText] = useState("");
 
+  let inputHandler = (e) => {
+    //convert input text to lower case
 
-  // Filter the data based on the search query
+    var lowerCase = e.target.value.toLowerCase();
+
+    setInputText(lowerCase);
+  };
+
   return (
     <>
       {/* <div>
         <input
           className="border-black border-solid border rounded p-1 text-black xm:text-2xl md:text-2xl md:p-2"
           placeholder="search"
-          type="text"  
+          type="text"
           onChange={(e) => setQuery(e.target.value)}
         />
         <ul>
@@ -24,7 +30,7 @@ function SearchBar() {
         </ul>
  
       </div> */}
-      <div>
+      {/* <div>
         <input
           className="border-black border-solid border rounded p-1 text-black xm:text-2xl md:text-2xl md:p-2"
           placeholder="search"
@@ -39,6 +45,10 @@ function SearchBar() {
             </div>
           );
         })}
+      </div> */}
+      <div>
+        <Input onChange={inputHandler} />
+        <List  input={inputText} />
       </div>
     </>
   );
