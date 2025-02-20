@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Data } from "./Data";
+import { Data } from "../user/users";
 
 const Search = () => {
-  const [store, setStore] = useState(Data);
+  const [store] = useState(Data);
   const [data, setData] = useState("");
 
   const getData = (e) => {
@@ -12,8 +12,8 @@ const Search = () => {
 
   let filterOut = store.filter((curValue) => {
     return (
-      curValue.name.toLowerCase().includes(data) ||
-      curValue.brand.toLowerCase().includes(data)
+        curValue.name?.toLowerCase().includes(data.toLowerCase()) || 
+        curValue.brand?.toLowerCase().includes(data.toLowerCase())
     );
   });
 
@@ -27,10 +27,10 @@ const Search = () => {
       </div>
       {filterOut.map((cur) => {
         return (
-          <div className="itemList">
-            <p>{cur.name}</p>
-            <p>{cur.brand}</p>
-            <img src={cur.img} />
+          <div className="flex flex-row ml-7 mt-9">
+            <p>{cur.movie_name}</p>
+            <p>{cur.duration}</p>
+            <img src={cur.images} />
           </div>
         );
       })}

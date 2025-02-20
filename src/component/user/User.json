@@ -9,216 +9,209 @@
   },
   {
     "id": 2,
-    "movie_name": "venom the last dance",
-    "release date ": "25 October 2024",
-    "type": "action, drama",
-    "detail": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    "images": "images/Rebel.jpeg"
+    "movie_name": "The Marvel",
+    "release date ": "11 November 2022",
+    "type": "action, Adventure",
+    "detail": "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. However, unintended consequences see her shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with two other superheroes to form the Marvels.",
+    "images": "images/Captain.jpeg"
   },
   {
     "id": 3,
-    "movie_name": "venom the last dance",
-    "release date ": "25 October 2024",
-    "type": "action, drama",
-    "detail": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    "images": "images/RebelRidge.jpeg"
+    "movie_name": "Kingdom of the Planet of the Apes",
+    "release date": "10 May 2024",
+    "type": "action, Sci-fi",
+    "detail": "Kingdom of the Planet of the Apes is a 2024 American science fiction action film directed by Wes Ball, serving as the fourth installment in the Planet of the Apes reboot series and the tenth film overall. It follows Noa, a young chimpanzee hunter, who embarks on a journey alongside Mae, a human woman, to determine the future for both apes and humans",
+    "images": "images/Kingdom of the Planet of the Apes.png.jpeg",
+    "duration": "2hrs 25mins"
   },
   {
     "id": 4,
-    "movie_name": "venom the last dance",
-    "release date ": "25 October 2024",
-    "type": "action, drama",
-    "detail": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    "images": "images/venom.jpeg"
+    "movie_name": "Deadpool & Wolverine",
+    "release date ": "25 July 2024",
+    "type": "action, comedy",
+    "detail": "Deadpool's peaceful existence comes crashing down when the Time Variance Authority recruits him to help safeguard the multiverse. He soon unites with his would-be pal, Wolverine, to complete the mission and save his world from an existential threat.",
+    "images": "images/Deadpool.jpeg"
   },
   {
     "id": 5,
-    "movie_name": "venom the last dance",
-    "release date ": "25 October 2024",
-    "type": "action, drama",
-    "detail": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    "images": "images/venom.jpeg"
+    "movie_name": "Canary Black",
+    "release date ": "3 October 2024",
+    "type": "action, thriller",
+    "detail": "Avery Graves, a CIA operative, is blackmailed by terrorists into betraying her own country to save her kidnapped husband. Cut off from her team, she turns to her underworld contacts to survive",
+    "images": "images/carey.jpeg",
+    "duration": "1hr 41mins"
   },
   {
     "id": 6,
-    "movie_name": "venom the last dance",
-    "release date ": "25 October 2024",
-    "type": "action, drama",
-    "detail": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    "images": "images/venom.jpeg"
+    "movie_name": "Rebel Moon",
+    "release date ": "15 December 2023",
+    "type": "action, sci-fi",
+    "detail": "Kora, a former Imperium soldier, ventures on a quest to recruit warriors from across the galaxy to make a stand against the Imperium before they return to Veldt",
+    "images": "images/Rebel.jpeg",
+    "duration": "2h 14m"
   },
   {
     "id": 7,
-    "movie_name": "venom the last dance",
-    "release date ": "25 October 2024",
-    "type": "action, drama",
-    "detail": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    "images": "images/venom.jpeg"
+    "movie_name": "Canary Black",
+    "release date ": "3 October 2024",
+    "type": "action, thriller",
+    "detail": "Avery Graves, a CIA operative, is blackmailed by terrorists into betraying her own country to save her kidnapped husband. Cut off from her team, she turns to her underworld contacts to survive",
+    "images": "images/carey.jpeg",
+    "duration": "1hr 41mins"
   },
   {
     "id": 8,
-    "movie_name": "venom the last dance",
-    "release date ": "25 October 2024",
-    "type": "action, drama",
-    "detail": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    "images": "images/venom.jpeg"
+    "movie_name": "Rebel Moon",
+    "release date ": "15 December 2023",
+    "type": "action, sci-fi",
+    "detail": "Kora, a former Imperium soldier, ventures on a quest to recruit warriors from across the galaxy to make a stand against the Imperium before they return to Veldt",
+    "images": "images/Rebel.jpeg",
+    "duration": "2h 14m"
   },
   {
     "id": 9,
-    "first_name": "Florida",
-    "last_name": "Licciardiello",
-    "email": "flicciardiello8@sina.com.cn",
-    "gender": "Female"
+    "movie_name": "Rebel Ridge",
+    "release date ": "6 September 2024",
+    "type": "action, thriller",
+    "detail": "A former Marine confronts corruption in a small town when local law enforcement unjustly seizes the bag of cash he needs to post his cousin's bail.",
+    "images": "images/RebelRidge.jpeg",
+    "duration": "2h 11m"
   },
   {
     "id": 10,
-    "first_name": "Gerianne",
-    "last_name": "Jonas",
-    "email": "gjonas9@typepad.com",
-    "gender": "Female"
+    "movie_name": "The Idea Of You",
+    "release date ": "15 December 2023",
+    "type": "romanance, comedy",
+    "detail": "A 40-year-old single mum begins an unexpected romance with a 24-year-old boy band singer.",
+    "images": "images/TheIdeaOfYou.jpeg",
+    "duration": "1h 55m"
   },
   {
     "id": 11,
-    "first_name": "Amy",
-    "last_name": "Tarbath",
-    "email": "atarbatha@t.co",
-    "gender": "Male"
+    "movie_name": "Your Fault",
+    "release date ": "18 December 2024",
+    "type": "romanance, drama",
+    "detail": "Noah and Nick's relationship seems unwavering despite their parents' attempts to separate them. Nick is willing to strengthen his relationship with Noah and prove that he is no longer the Nick he used to be: the one who was into fighting, racing, and girls. Nick starts working for his father's law firm alongside an attractive colleague, Sophia; and Noah goes to college, where she shares an apartment with Briar, an enigmatic and fun girl who hides a dark secret behind her smile",
+    "images": "images/YourFault.jpeg",
+    "duration": "1h 55m"
   },
   {
     "id": 12,
-    "first_name": "Jerrilyn",
-    "last_name": "Devil",
-    "email": "jdevilb@upenn.edu",
-    "gender": "Male"
+    "movie_name": "A True Gentleman",
+    "release date ": "26 september 2023",
+    "type": "romanance",
+    "detail": "tells the story of Saygin, a charming man who lives a glamorous life as a gigolo, captivating wealthy women with his charisma, but secretly struggling with deep unhappiness and emotional emptiness; his life takes a drastic turn when he meets Nehir, a young woman who challenges his perspective on love and forces him to confront his true desires and needs",
+    "images": "images/aTrueGentleman.jpeg",
+    "duration": "1h 50m"
   },
   {
+ 
     "id": 13,
-    "first_name": "Derrik",
-    "last_name": "Halvorsen",
-    "email": "dhalvorsenc@loc.gov",
-    "gender": "Male"
+    "movie_name": "Rebel Ridge",
+    "release date ": "6 September 2024",
+    "type": "action, thriller",
+    "detail": "A former Marine confronts corruption in a small town when local law enforcement unjustly seizes the bag of cash he needs to post his cousin's bail.",
+    "images": "images/RebelRidge.jpeg",
+    "duration": "2h 11m"
   },
   {
     "id": 14,
-    "first_name": "Kellia",
-    "last_name": "Driutti",
-    "email": "kdriuttid@skyrock.com",
-    "gender": "Male"
+    "movie_name": "UGLIES",
+    "release date ": "6 September 2024",
+    "type": "drama",
+    "detail": "Uglies by Scott Westerfeld is the first book in a dystopian trilogy set in a future society where everyone undergoes a mandatory cosmetic surgery at age sixteen to become “Pretty.” This transformation is meant to create physical equality and erase any imperfections, leaving everyone looking flawless and uniform. The society’s obsession with beauty and perfection is central to the world Westerfeld creates.",
+    "images": "images/UGLIES.jpeg",
+    "duration": "1h 42m"
   },
   {
     "id": 15,
-    "first_name": "Denys",
-    "last_name": "Abrams",
-    "email": "dabramse@godaddy.com",
-    "gender": "Male"
+    "movie_name": "Batman",
+    "release date ": "4 March 2022",
+    "type": "action, drama",
+    "detail": "Batman ventures into Gotham City's underworld when a sadistic killer leaves behind a trail of cryptic clues. As the scale of the perpetrator's plans become clear, he must bring justice to the abuse of power and corruption that plagues the metropolis.",
+    "duration": "2h 56m"
   },
   {
     "id": 16,
-    "first_name": "Sophie",
-    "last_name": "Wadmore",
-    "email": "swadmoref@taobao.com",
-    "gender": "Male"
+    "movie_name": "Back in Action",
+    "release date ": "17 January 2025",
+    "type": "action, comedy",
+    "detail": "Former CIA spies Emily and Matt are pulled back into espionage after their secret identities are exposed.",
+    "images": "images/BackToAction.jpeg",
+    "duration": "1h 52mins"
   },
   {
     "id": 17,
-    "first_name": "Ivonne",
-    "last_name": "Axby",
-    "email": "iaxbyg@paginegialle.it",
-    "gender": "Male"
+    "movie_name": "Divergent",
+    "release date ": "21 March 2014",
+    "type": "action, Sci-fi",
+    "detail": "Tris Prior (Shailene Woodley) lives in a futuristic world in which society is divided into five factions. As each person enters adulthood, he or she must choose a faction and commit to it for life. Tris chooses Dauntless -- those who pursue bravery above all else. However, her initiation leads to the discovery that she is a Divergent and will never be able to fit into just one faction. Warned that she must conceal her status, Tris uncovers a looming war which threatens everyone she loves.",
+    "images": "images/Divergent.jpeg",
+
+    "duration": "2h 19m"
   },
   {
+ 
     "id": 18,
-    "movie_name": "venom the last dance",
-    "release date ": "25 October 2024",
-    "type": "action, drama",
-    "detail": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    "images": "images/venom.jpeg"
-  },
-  {
-    "id": 19,
-    "movie_name": "venom the last dance",
-    "release date ": "25 October 2024",
-    "type": "action, drama",
-    "detail": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    "images": "images/venom.jpeg"
+    "movie_name": "The Marvel",
+    "release date ": "11 November 2022",
+    "type": "action, Adventure",
+    "detail": "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. However, unintended consequences see her shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with two other superheroes to form the Marvels.",
+    "images": "images/Captain.jpeg"
   },
   {
     "id": 20,
-    "movie_name": "venom the last dance",
-    "release date ": "25 October 2024",
-    "type": "action, drama",
-    "detail": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    "images": "images/venom.jpeg"
+    "movie_name": "Challengers",
+    "release date ": "26 April 2024",
+    "type": "romanance, comedy",
+    "detail": "Tashi, a tennis player turned coach, has transformed her husband from a mediocre player into a world-famous grand slam champion. To jolt him out of his recent losing streak, she makes him play a challenger event -- close to the lowest level of tournament on the pro tour. Tensions soon run high when he finds himself standing across the net from the once-promising, now burnt-out Patrick, his former best friend and Tashi's former boyfriend.",
+    "images": "images/Challengers.jpeg",
+    "duration": "2h 11m"
   },
   {
-    "id": 21,
-    "movie_name": "venom the last dance",
-    "release date ": "25 October 2024",
+    "id": 19,
+    "movie_name": "The Tearsmith",
+    "release date ": "4 April 2024",
     "type": "action, drama",
-    "detail": "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    "images": "images/venom.jpeg"
+    "detail": "Sometimes one's greatest fear is accepting that someone can honestly love them for who they are. Nica and Rigel are ready to find it out together.",
+    "images": "images/tearSmith.jpeg",
+    "duration": "1h 45m"
+
+  },
+  {
+    "id": 20,
+    "movie_name": "The Idea Of You",
+    "release date ": "15 December 2023",
+    "type": "romanance, comedy",
+    "detail": "A 40-year-old single mum begins an unexpected romance with a 24-year-old boy band singer.",
+    "images": "images/TheIdeaOfYou.jpeg",
+    "duration": "1h 55m"
   },
   {
     "id": 22,
-    "first_name": "Florida",
-    "last_name": "Licciardiello",
-    "email": "flicciardiello8@sina.com.cn",
-    "gender": "Female"
+    "movie_name": "Upgraded",
+    "release date ": "15 December 2023",
+    "type": "romanance, comedy",
+    "detail": "An aspiring art intern is invited on a last-minute work trip to London, where she meets a handsome stranger.",
+    "images": "images/Upgraded.jpeg",
+    "duration": "1h 44m"
   },
   {
     "id": 23,
-    "first_name": "Gerianne",
-    "last_name": "Jonas",
-    "email": "gjonas9@typepad.com",
-    "gender": "Female"
+    "movie_name": "Your Fault",
+    "release date ": "18 December 2024",
+    "type": "romanance, drama",
+    "detail": "Noah and Nick's relationship seems unwavering despite their parents' attempts to separate them. Nick is willing to strengthen his relationship with Noah and prove that he is no longer the Nick he used to be: the one who was into fighting, racing, and girls. Nick starts working for his father's law firm alongside an attractive colleague, Sophia; and Noah goes to college, where she shares an apartment with Briar, an enigmatic and fun girl who hides a dark secret behind her smile",
+    "images": "images/YourFault.jpeg",
+    "duration": "1h 55m"
   },
   {
     "id": 24,
-    "first_name": "Amy",
-    "last_name": "Tarbath",
-    "email": "atarbatha@t.co",
-    "gender": "Male"
-  },
-  {
-    "id": 25,
-    "first_name": "Jerrilyn",
-    "last_name": "Devil",
-    "email": "jdevilb@upenn.edu",
-    "gender": "Male"
-  },
-  {
-    "id": 26,
-    "first_name": "Derrik",
-    "last_name": "Halvorsen",
-    "email": "dhalvorsenc@loc.gov",
-    "gender": "Male"
-  },
-  {
-    "id": 27,
-    "first_name": "Kellia",
-    "last_name": "Driutti",
-    "email": "kdriuttid@skyrock.com",
-    "gender": "Male"
-  },
-  {
-    "id": 28,
-    "first_name": "Denys",
-    "last_name": "Abrams",
-    "email": "dabramse@godaddy.com",
-    "gender": "Male"
-  },
-  {
-    "id": 29,
-    "first_name": "Sophie",
-    "last_name": "Wadmore",
-    "email": "swadmoref@taobao.com",
-    "gender": "Male"
-  },
-  {
-    "id": 30,
-    "first_name": "Ivonne",
-    "last_name": "Axby",
-    "email": "iaxbyg@paginegialle.it",
-    "gender": "Male"
+    "movie_name": "A True Gentleman",
+    "release date ": "26 september 2023",
+    "type": "romanance",
+    "detail": "tells the story of Saygin, a charming man who lives a glamorous life as a gigolo, captivating wealthy women with his charisma, but secretly struggling with deep unhappiness and emotional emptiness; his life takes a drastic turn when he meets Nehir, a young woman who challenges his perspective on love and forces him to confront his true desires and needs",
+    "images": "images/aTrueGentleman.jpeg",
+    "duration": "1h 50m"
   }
 ]

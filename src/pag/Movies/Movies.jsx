@@ -3,6 +3,7 @@ import RotatingCard from "../../component/RotatingCard/RotatingCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Search from "../../component/SearchBar/Search";
 
 function Movies() {
   const settings = {
@@ -12,7 +13,7 @@ function Movies() {
     slidesToShow:
       window.innerWidth > 1400
         ? 5 // If window width is greater than 1200px, show 4 slides
-        : window.innerWidth >1100
+        : window.innerWidth > 1100
         ? 4
         : window.innerWidth > 900
         ? 3
@@ -29,10 +30,7 @@ function Movies() {
       <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] bg-[#808080] md:overflow-x-hidden xs:w-[27rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[33.5rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem] xlg:w-[90rem]">
         <div className="flex flex-row mt-4 ml-5 md:ml-10 gap-10 lg:gap-52">
           <div>
-            <input
-              className="border-black border-solid border rounded p-1 text-black xm:text-2xl md:text-2xl md:p-2"
-              placeholder="search"
-            />
+            <Search/>
             <img
               className="w-5 h-5 absolute top-7 left-[11rem] xm:left-[16rem] md:left-[18rem] md:w-8 md:h-8"
               src="images/loupe.png"
