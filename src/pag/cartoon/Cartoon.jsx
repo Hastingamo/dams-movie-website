@@ -1,4 +1,3 @@
-import React from 'react'
 import Modal from "../../component/Modal/Modal";
 import RotatingCard from "../../component/RotatingCard/RotatingCard";
 import "slick-carousel/slick/slick.css";
