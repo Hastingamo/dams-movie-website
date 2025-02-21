@@ -12,7 +12,7 @@ function PIcs(props) {
         {props.name}
       </h1>
       <img
-        className="ml-2 w-[9rem] h-[3rem] xs:w-[6.6rem] md:ml-6 md:w-[11rem] lg:w-[9rem] xl:w-44"
+        className="ml-2 w-[9rem] h-[3rem] xs:w-[6.6rem] md:ml-6 md:w-[11rem] xp:w-[9rem] lg:w-[9rem] xl:w-44"
         src={props.imgs2}
         alt=""
       />

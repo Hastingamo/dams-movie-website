@@ -9,6 +9,7 @@ export default {
       screens: {
         'xs': '400px',
         'xm': '500px',
+        'xp' : '800px',
         'xlg': '1400px',
       },
       inset: {
