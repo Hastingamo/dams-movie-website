@@ -9,6 +9,8 @@ function Headers() {
           <Link to="/">Home</Link>
           <Link to="Series">Series</Link>
           <Link to="Movies">Movies</Link>
+          <Link to="Cartoon">Cartoon</Link>
+
         </nav>
       </header>
       <header className=" h-10 w-full bg-red-500 flex flex-row xs:w-[27rem] xm:w-[33.6rem] sm:hidden">
@@ -17,6 +19,7 @@ function Headers() {
         <Link to="/">Home</Link>
         <Link to="Series">Series</Link>
         <Link to="Movies">Movies</Link>
+        <Link to="Cartoon">Cartoon</Link>
       </header>
     </>
   );
