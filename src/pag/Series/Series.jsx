@@ -12,8 +12,8 @@ function Series() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 8000);
-  });
+    }, 3000);
+  },[]);
   const settings = {
     dots: true,
     infinite: false,
@@ -38,7 +38,7 @@ function Series() {
       <div>
         {
           loading ?(
-            <MoonLoader
+            <MoonLoader className="ml-[7rem] mt-64 xm:ml-[12rem] xm:mt-48 md:ml-[25rem] md:-mt-[40rem] lg:ml-[32rem] lg:-mt-[50rem] xl:ml-[40rem] xl:-mt-96"
             color={"black"}
             loading={loading}
             // cssOverride={override}

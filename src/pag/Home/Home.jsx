@@ -2,6 +2,8 @@ import PIcs from "../../component/continuePic/PIcs";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect, useState } from "react";
+import { MoonLoader } from "react-spinners";
 // import { useState, useEffect } from 'react';
 
 function Home() {
@@ -29,6 +31,13 @@ function Home() {
   //   }, []);
 
   // }
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
   const settings = {
     dots: true,
@@ -36,9 +45,9 @@ function Home() {
     speed: 700,
     slidesToShow:
       window.innerWidth > 1400
-              // If window width is greater than 1200px, show 4 slides
-        ? 5
-        : window.innerWidth >1100
+        ? // If window width is greater than 1200px, show 4 slides
+          5
+        : window.innerWidth > 1100
         ? 4
         : window.innerWidth > 900
         ? 3
@@ -47,79 +56,80 @@ function Home() {
         : window.innerWidth > 500
         ? 3
         : window.innerWidth > 400
-        ? 3// If window width is between 480px and 768px, show 2 slides
+        ? 3 // If window width is between 480px and 768px, show 2 slides
         : 2,
   };
   return (
     <>
-      <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] bg-[#808080] md:overflow-x-hidden xs:w-[27rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[32.8rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem] xlg:w-[90rem]">
-        <img
-          src="images/Kingdom of the Planet of the Apes.png"
-          className="w-full sm:w-[99%] sm:h-[100%] md:w-full md:h-full"
-        />
-        <h1 className="text-2xl text-white italic py-6 px-4">
-          {" "}
-          continue watching
-        </h1>
-        <div className="ml-5">
-          <Slider {...settings}>
-            <PIcs
-              img="images/Kingdom of the Planet of the Apes.png"
-              name="s1 : esp4"
-              imgss="images/dots.png"
-              imgs2="images/load-bar.png"
-              imgs3="images/info.png"
+      <div>
+        {loading ? (
+          <MoonLoader className="ml-[7rem] mt-64 xm:ml-[12rem] xm:mt-48 md:ml-[25rem] md:-mt-[40rem] lg:ml-[32rem] lg:-mt-[50rem] xl:ml-[40rem] xl:-mt-96"
+          color={"black"}
+            loading={loading}
+            // cssOverride={override}
+            size={150}
+            // aria-label="Loading Spinner"
+            // data-testid="loader"
+          />
+        ) : (
+          <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] bg-[#808080] md:overflow-x-hidden xs:w-[27rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[32.8rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem] xlg:w-[90rem]">
+            <img
+              src="images/Kingdom of the Planet of the Apes.png"
+              className="w-full sm:w-[99%] sm:h-[100%] md:w-full md:h-full"
             />
-            <PIcs
-              img="images/download.jpeg"
-              name="s1 : esp4"
-              imgss="images/dots.png"
-              imgs2="images/load-bar.png"
-              imgs3="images/info.png"
-            />
-            <PIcs
-              img="images/DUNE POSTER 4K 2021.jpeg"
-              name="s1 : esp4"
-              imgss="images/dots.png"
-              imgs2="images/load-bar.png"
-              imgs3="images/info.png"
-            />
-            <PIcs
-              img="images/Road House (2024).jpeg"
-              name="s1 : esp4"
-              imgss="images/dots.png"
-              imgs2="images/load-bar.png"
-              imgs3="images/info.png"
-            />
-            <PIcs
-              img="images/DUNE POSTER 4K 2021.jpeg"
-              name="s1 : esp4"
-              imgss="images/dots.png"
-              imgs2="images/load-bar.png"
-              imgs3="images/info.png"
-            />
-            <PIcs
-              img="images/Road House (2024).jpeg"
-              name="s1 : esp4"
-              imgss="images/dots.png"
-              imgs2="images/load-bar.png"
-              imgs3="images/info.png"
-            />
-          </Slider>
-        </div>
+            <h1 className="text-2xl text-white italic py-6 px-4">
+              {" "}
+              continue watching
+            </h1>
+            <div className="ml-5">
+              <Slider {...settings}>
+                <PIcs
+                  img="images/Kingdom of the Planet of the Apes.png"
+                  name="s1 : esp4"
+                  imgss="images/dots.png"
+                  imgs2="images/load-bar.png"
+                  imgs3="images/info.png"
+                />
+                <PIcs
+                  img="images/download.jpeg"
+                  name="s1 : esp4"
+                  imgss="images/dots.png"
+                  imgs2="images/load-bar.png"
+                  imgs3="images/info.png"
+                />
+                <PIcs
+                  img="images/DUNE POSTER 4K 2021.jpeg"
+                  name="s1 : esp4"
+                  imgss="images/dots.png"
+                  imgs2="images/load-bar.png"
+                  imgs3="images/info.png"
+                />
+                <PIcs
+                  img="images/Road House (2024).jpeg"
+                  name="s1 : esp4"
+                  imgss="images/dots.png"
+                  imgs2="images/load-bar.png"
+                  imgs3="images/info.png"
+                />
+                <PIcs
+                  img="images/DUNE POSTER 4K 2021.jpeg"
+                  name="s1 : esp4"
+                  imgss="images/dots.png"
+                  imgs2="images/load-bar.png"
+                  imgs3="images/info.png"
+                />
+                <PIcs
+                  img="images/Road House (2024).jpeg"
+                  name="s1 : esp4"
+                  imgss="images/dots.png"
+                  imgs2="images/load-bar.png"
+                  imgs3="images/info.png"
+                />
+              </Slider>
+            </div>
+          </div>
+        )}
       </div>
-      {/* <MiniBar
-        cancel="images/cancel.png"
-        modalId={"myModal"}
-        // ModalId="kingdom of the planent of the apes"
-        details="images/info.png"
-        detail="espisode & info"
-        likes="images/like.png"
-        like="like"
-        dislikes="images/dontlike.png"
-        dislike="dislike"
-        love="love"
-      /> */}
     </>
   );
 }
