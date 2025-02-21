@@ -12,7 +12,7 @@ function Series() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 4500);
   },[]);
   const settings = {
     dots: true,
