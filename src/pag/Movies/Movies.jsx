@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import { MoonLoader } from "react-spinners";
+import { Link } from "react-router-dom";
 
 function Movies() {
   const [loading, setLoading] = useState(false);
@@ -70,12 +71,12 @@ function Movies() {
             <h1 className="mt-4 ml-4 text-2xl text-white">Popular</h1>
             <div className="ml-12">
               <Slider {...settings}>
-                <RotatingCard
-                  Captainmarvel="images/Venom.jpeg"
-                  info="images/info.png"
-                  love="images/info.png"
-                  share="images/info.png"
-                />
+                  <RotatingCard
+                    Captainmarvel="images/Venom.jpeg"
+                    info="images/info.png"
+                    love="images/info.png"
+                    share="images/info.png"
+                  />
                 <RotatingCard
                   Captainmarvel="images/Captain.png"
                   info="images/info.png"

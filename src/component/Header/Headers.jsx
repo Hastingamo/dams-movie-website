@@ -10,6 +10,9 @@ function Headers() {
           <Link to="Series">Series</Link>
           <Link to="Movies">Movies</Link>
           <Link to="Cartoon">Cartoon</Link>
+          <Link to="Login">Login</Link>
+          <Link to="SignUp">SignUp</Link>
+
 
         </nav>
       </header>
@@ -20,6 +23,8 @@ function Headers() {
         <Link to="Series">Series</Link>
         <Link to="Movies">Movies</Link>
         <Link to="Cartoon">Cartoon</Link>
+        <Link to="Login">Login</Link>
+        <Link to="SignUp">SignUp</Link>
       </header>
     </>
   );

@@ -20,9 +20,10 @@ function RotatingCard({ Captainmarvel, love, info, share }) {
           className="bg-[#1403037e] md:ml-3 sm:bg-[#1403037e] rounded-lgw-[25.3rem] h-[12.8rem] rounded-lg  xm:w-[10rem] md:w-[14.5rem] md:h-[16.98rem] lg:w-[15rem] lg:h-[22rem] mt-8 flex justify-center items-center"
           onClick={flipeds}
         >
-          <img className="w-5 h-5 " src={love} alt="" />
+            <button>view</button>
+          {/* <img className="w-5 h-5 " src={love} alt="" />
           <img className="w-5 h-5" src={info} alt="" />
-          <img className="w-5 h-5 " src={share} alt="" />
+          <img className="w-5 h-5 " src={share} alt="" /> */}
         </div>
       </ReactCardFlip>
     </>
