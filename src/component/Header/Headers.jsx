@@ -12,6 +12,7 @@ function Headers() {
           <Link to="Cartoon">Cartoon</Link>
           <Link to="Login">Login</Link>
           <Link to="SignUp">SignUp</Link>
+          <Link to="Profile">Profile</Link>
 
 
         </nav>
@@ -25,6 +26,8 @@ function Headers() {
         <Link to="Cartoon">Cartoon</Link>
         <Link to="Login">Login</Link>
         <Link to="SignUp">SignUp</Link>
+        <Link to="Profile">Profile</Link>
+
       </header>
     </>
   );

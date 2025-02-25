@@ -7,18 +7,13 @@ import Footer from "./component/Footer/Footer";
 import Cartoon from "./pag/cartoon/Cartoon";
 import SignUp from "./pag/Signup/SignUp";
 import Login from "./pag/Login/Login";
-import { ToastContainer } from "react-toastify";
-
-
-
+import Profile from "./pag/porfile/Profile";
 
 function App() {
-
-
   return (
     <>
       <Headers />
-      
+
       <Routes>
         <Route path="" element={<Home />}></Route>
         <Route path="Movies" element={<Movies />}></Route>
@@ -26,6 +21,7 @@ function App() {
         <Route path="Cartoon" element={<Cartoon />}></Route>
         <Route path="Login" element={<Login />}></Route>
         <Route path="SignUp" element={<SignUp />}></Route>
+        <Route path="Profile" element={<Profile />}></Route>
       </Routes>
       <Footer />
     </>
