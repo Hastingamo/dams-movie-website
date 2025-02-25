@@ -34,7 +34,8 @@ function SignUp() {
           lastName: lname,
           photo:""
         });
-        
+        window.location.href = "/Login";
+
       }
 
     }catch(error){
