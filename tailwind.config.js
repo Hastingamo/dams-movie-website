@@ -15,9 +15,7 @@ export default {
       inset: {
         'by': '10000px'
       },
-      borderRadius:{
-        'bg': '0px 0px 20px 20px'
-      },
+
       
     },
   },
