@@ -8,6 +8,7 @@ import Cartoon from "./pag/cartoon/Cartoon";
 import SignUp from "./pag/Signup/SignUp";
 import Login from "./pag/Login/Login";
 import Profile from "./pag/porfile/Profile";
+import Rgister from "./pag/Register/Rgister";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <Headers />
 
       <Routes>
-        <Route path="" element={<Home />}></Route>
+        <Route path="" element={<Rgister />}></Route>
+        <Route path="Home" element={<Home />}></Route>
         <Route path="Movies" element={<Movies />}></Route>
         <Route path="Series" element={<Series />}></Route>
         <Route path="Cartoon" element={<Cartoon />}></Route>
