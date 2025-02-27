@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { auth, db } from "../../component/firebase/FireBase";
 import { doc, getDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
+import Regis from "../Register/Regis";
 
 function Profile() {
+  const navigate = useNavigate();
     const [userDetails, setUserDetails] = useState(null);
     const fetchUserData = async () => {
       auth.onAuthStateChanged(async (user) => {
@@ -53,9 +56,37 @@ function Profile() {
           <button className="btn btn-primary  w-16 h-16 bg-black text-white items-center" onClick={handleLogout}>
             Logout
           </button>
+          <button onClick={()=>navigate("/Home")} className="btn btn-primary  w-16 h-16 bg-black text-white items-center">
+            home
+          </button>
         </>
       ) : (
-        <p>Loading...</p>
+            <div className="flex justify-center items-center flex-col">
+              <p>you have not an account with us </p>
+              <div className="flex justify-center items-center mt-11">
+          <div className="w-[20rem] mt-8  md:mt-16 xp:w-[34rem] lg:w-[37rem] xlg:w-[55rem] flex  flex-col shadow-xl shadow-black">
+                <div className="w-[20rem]  xp:w-[34rem] lg:w-[37rem] xlg:w-[55rem] h-[10rem] bg-[#8ec3f7]">
+
+                </div>
+                <div className="bg-white h-[24rem] w-[20rem] xp:w-[34rem] xp:h-[32rem] lg:w-[37rem] lg:h-[40rem] xlg:w-[55rem] xlg:h-[32rem]">
+                  <h1 className="text-black text-3xl flex justify-center items-center mt-4 font-sans xp:text-5xl xp:mt-9"> welcome! </h1>
+                  <div onClick={()=>navigate("SignUp")} className=" mt-7 hover:bg-[#c1d7f4] rounded-3xl border-l-black w-[17rem] h-14 ml-6 bg-[#f2f7fc] xp:mt-16 xp:ml-20 xp:h-20 xp:w-[25rem] xlg:w-[45rem]"> 
+                      <h1 className="text-2xl text-center pt-2 xp:text-3xl xp:pt-4">create account</h1>
+                  </div>
+                  <div onClick={()=>navigate("Login")} className=" mt-7 hover:bg-[#c1d7f4] rounded-3xl border-l-black w-[17rem] h-14 ml-6 bg-[#f2f7fc] xp:mt-16 xp:ml-20 xp:h-20 xp:w-[25rem] xlg:w-[45rem]"> 
+                      <h1 className="text-2xl text-center pt-2 xp:text-3xl xp:pt-4">login</h1>
+                  </div>
+                  <Regis
+                  google="images/social.png"
+                  facebbok="images/facebook.png"
+                  linkedin="images/linkedin.png"
+                  twitter="images/twitter.png">
+
+                  </Regis>
+                </div>
+          </div>
+        </div>
+            </div>
       )}
     </div>  )
 }

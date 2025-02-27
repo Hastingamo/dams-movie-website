@@ -17,7 +17,7 @@ function Rgister() {
                   <div onClick={()=>navigate("SignUp")} className=" mt-7 hover:bg-[#c1d7f4] rounded-3xl border-l-black w-[17rem] h-14 ml-6 bg-[#f2f7fc] xp:mt-16 xp:ml-20 xp:h-20 xp:w-[25rem] xlg:w-[45rem]"> 
                       <h1 className="text-2xl text-center pt-2 xp:text-3xl xp:pt-4">create account</h1>
                   </div>
-                  <div onClick={()=>navigate("LoginIn")} className=" mt-7 hover:bg-[#c1d7f4] rounded-3xl border-l-black w-[17rem] h-14 ml-6 bg-[#f2f7fc] xp:mt-16 xp:ml-20 xp:h-20 xp:w-[25rem] xlg:w-[45rem]"> 
+                  <div onClick={()=>navigate("Login")} className=" mt-7 hover:bg-[#c1d7f4] rounded-3xl border-l-black w-[17rem] h-14 ml-6 bg-[#f2f7fc] xp:mt-16 xp:ml-20 xp:h-20 xp:w-[25rem] xlg:w-[45rem]"> 
                       <h1 className="text-2xl text-center pt-2 xp:text-3xl xp:pt-4">login</h1>
                   </div>
                   <Regis

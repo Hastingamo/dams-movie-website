@@ -12,7 +12,6 @@ function Headers() {
           <Link to="Login">Login</Link>
           <Link to="SignUp">SignUp</Link>
           <Link to="Profile">Profile</Link>
-          <Link to="/">Register</Link>
 
         </nav>
       </header>
