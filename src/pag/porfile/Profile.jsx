@@ -35,20 +35,22 @@ function Profile() {
     <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] xp:w-[42rem] xp:overflow-x-hidden bg-[#808080] md:overflow-x-hidden xs:w-[27rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[32.8rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem] xlg:w-[90rem]">
       {userDetails ? (
         <>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="flex">
             <img
               src={userDetails.photo}
               width={"40%"}
               style={{ borderRadius: "50%" }}
             />
           </div>
-          <h3>Welcome {userDetails.firstName} 🙏🙏</h3>
+          <h3 className="text-center mt-9">Welcome {userDetails.firstName} 🙏🙏</h3>
           <div>
-            <p>Email: {userDetails.email}</p>
-            <p>First Name: {userDetails.firstName}</p>
+            <p className="text-center mt-2">Email: {userDetails.email}</p>
+            <p className="text-center mt-2 ">First Name: {userDetails.firstName}</p>
+            <p className="text-center mt-2">last Name: {userDetails.lastName}</p>
+
             {/* <p>Last Name: {userDetails.lastName}</p> */}
           </div>
-          <button className="btn btn-primary" onClick={handleLogout}>
+          <button className="btn btn-primary  w-16 h-16 bg-black text-white items-center" onClick={handleLogout}>
             Logout
           </button>
         </>
