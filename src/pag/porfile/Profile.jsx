@@ -35,6 +35,7 @@ function Profile() {
         console.error("Error logging out:", error.message);
       }
     }
+    
   return (
     <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] xp:w-[42rem] xp:overflow-x-hidden bg-[#808080] md:overflow-x-hidden xs:w-[27rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[32.8rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem] xlg:w-[90rem]">
       {userDetails ? (
@@ -43,7 +44,7 @@ function Profile() {
             <img
               src={userDetails.photo}
               style={{ borderRadius: "50%" }}
-              className="w-10 h-12"
+              className="w-10 h-14"
             />
           </div>
           <h3 className="text-center mt-9">Welcome {userDetails.firstName} 🙏🙏</h3>
