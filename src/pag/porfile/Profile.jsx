@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { auth, db } from "../../component/firebase/FireBase";
 import { doc, getDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
@@ -51,8 +51,7 @@ function Profile() {
           <div>
             <p className="text-center mt-2">Email: {userDetails.email}</p>
             <p className="text-center mt-2 ">First Name: {userDetails.firstName}</p>
-
-            {/* <p>Last Name: {userDetails.lastName}</p> */}
+            <p>Last Name: {userDetails.lastName}</p>
           </div>
           <button className="btn btn-primary  w-16 h-16 bg-black text-white items-center" onClick={handleLogout}>
             Logout

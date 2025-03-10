@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import { MoonLoader } from "react-spinners";
 import { Link } from "react-router-dom";
+import Search from "../../component/SearchBar/Search"
 
 function Movies() {
   const [loading, setLoading] = useState(false);
@@ -67,6 +68,7 @@ function Movies() {
                 ratings="images/star.png"
                 alls="images/all.png"
               />
+              {/* <Search/> */}
             </div>
             <h1 className="mt-4 ml-4 text-2xl text-white">Popular</h1>
             <div className="ml-12">

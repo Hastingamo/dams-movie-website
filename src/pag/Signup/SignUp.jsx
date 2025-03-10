@@ -57,7 +57,7 @@ function SignUp() {
             <h3 className="text-center mt-7">Sign Up</h3>
 
             </div>
-            <div className="bg-white h-[36rem] xs:h-[35rem] w-[20rem] xm:h-[32rem] xp:w-[34rem] xp:h-[43rem] lg:w-[37rem] lg:h-[42rem] xlg:w-[55rem] xlg:h-[42rem]">
+            <div className="bg-white h-[36rem] xs:h-[35rem] w-[20rem] xm:h-[36rem] xp:w-[34rem] xp:h-[44rem] lg:w-[37rem] lg:h-[45rem] xlg:w-[55rem] xlg:h-[42rem]">
               <form onSubmit={handleRegister}>
                 <div className="mb-3 flex flex-col mt-5 ml-11 xp:mt-10 xp:ml-24 rounded-sm w-[15rem]  xp:w-[23rem] lg:w-[28rem] xlg:w-[43rem] shadow-md shadow-black">
                   <label className="text-2xl">First name</label>
@@ -107,7 +107,7 @@ function SignUp() {
                     Sign Up
                   </button>
                 </div>
-                <p onClick={()=>navigate("Login")} className="forgot-password text-center text-2xl xp:text-3xl">
+                <p onClick={()=>navigate("/Login")} className="forgot-password text-center text-2xl xp:text-3xl">
                   Already registered login
                 </p>
               </form>

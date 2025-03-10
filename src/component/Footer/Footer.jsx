@@ -1,8 +1,13 @@
 function Footer() {
   return (
-    <div className="hidden md:w-[32.8rem] md:h-[20rem] fixed">
-      <h1 className="text-red-400">footer</h1>
-    </div>
+    <>
+      <Footer>
+          <div className="w-[20rem] h-[20rem] bg-black text-white md:hidden ">
+
+          </div>
+      </Footer>
+    </>
+
   )
 }
 

@@ -23,7 +23,7 @@ function Login() {
         <div className="flex justify-center items-center mt-11">
           <div className="w-[20rem] xs:mt-9 xm:mt-0 md:mt-16 xp:w-[34rem] lg:w-[37rem] xlg:w-[55rem] flex  flex-col shadow-xl shadow-black">
             <div className="w-[20rem]  xp:w-[34rem] lg:w-[37rem] xlg:w-[55rem] h-[8rem] bg-[#8ec3f7]">
-              <h3 className="text-center mt-7">Sign Up</h3>
+              <h3 className="text-center mt-7">Login</h3>
             </div>
             <div className="bg-white h-[23rem] xs:h-[22rem] w-[20rem] xm:h-[24rem] xp:w-[34rem] xp:h-[32rem] lg:w-[37rem] lg:h-[31rem] xlg:w-[55rem] xlg:h-[34rem]">
               <form onSubmit={handleSubmit}>

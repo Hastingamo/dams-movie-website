@@ -14,7 +14,6 @@ function App() {
   return (
     <>
       <Headers />
-
       <Routes>
         <Route path="" element={<Rgister />}></Route>
         <Route path="Home" element={<Home />}></Route>
@@ -25,7 +24,6 @@ function App() {
         <Route path="SignUp" element={<SignUp />}></Route>
         <Route path="Profile" element={<Profile />}></Route>
       </Routes>
-      <Footer />
     </>
   );
 }
