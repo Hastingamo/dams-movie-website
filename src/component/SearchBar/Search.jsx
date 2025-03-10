@@ -4,35 +4,50 @@ import { Data } from "../user/users";
 const Search = () => {
   const [store] = useState(Data);
   const [data, setData] = useState("");
+  const [display, setDisplay] = useState("");
 
   const getData = (e) => {
     console.log(e.target.value);
     setData(e.target.value);
+    setDisplay("none")
   };
 
   let filterOut = store.filter((curValue) => {
     return (
-        curValue.movie_name?.toLowerCase().includes(data.toLowerCase()) || 
-        curValue.duration?.toLowerCase().includes(data.toLowerCase())
+      curValue.movie_name?.toLowerCase().includes(data.toLowerCase()) ||
+      curValue.duration?.toLowerCase().includes(data.toLowerCase())
     );
   });
+  const limitedData = filterOut.slice(0, 5);
 
   return (
     <div className="container">
       <input type="text" placeholder="Search Here.." onChange={getData} />
-      <div className="flex flex-row ml-7 gap-9">
-        <h3>Name</h3>
-        <h3>Brand</h3>
-        <h3>Images</h3>
-      </div>
-      {filterOut.length > 0 ? (
-        filterOut.map((curValue) => (
-          <div key={curValue.id || curValue.name} className="flex flex-row ml-7 mt-9 gap-9">
+
+      {limitedData.length > 0 ? (
+        limitedData.map((curValue) => (
+          <div
+            key={curValue.id || curValue.name}
+            className={`flex flex-row ml-4 gap-8  || ${display}`}
+          >
             {/* Ensure you use proper property names */}
-            
-            <p>{curValue.movie_name || "No name available"}</p>
-            <p>{curValue.duration || "No brand available"}</p>
-            <img src={curValue.images} alt={curValue.name || "Image"} width="100 " height="50" />
+            <div className="flex flex-row gap-6">
+              <div>
+                <img
+                  src={curValue.images}
+                  alt={curValue.name || "Image"}
+                  className="w-16 h-24 mt-5"
+                />
+              </div>
+              <div className="flex flex-col">
+                <p className="mt-5 text-2xl md:text-3xl">
+                  {curValue.movie_name || "No name available"}
+                </p>
+                <p className="mt-3 md:text-2xl">
+                  {curValue.duration || "No brand available"}
+                </p>
+              </div>
+            </div>
           </div>
         ))
       ) : (

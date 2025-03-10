@@ -6,7 +6,7 @@ export const Data = [
     type: "action, drama",
     detail:
       "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
-    images: "images/venom.jpeg",
+    images: "images/Venom.jpeg",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const Data = [
     type: "action, Adventure",
     detail:
       "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. However, unintended consequences see her shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with two other superheroes to form the Marvels.",
-    images: "images/Captain.jpeg",
+    images: "images/Captain.png",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const Data = [
     type: "action, Sci-fi",
     detail:
       "Kingdom of the Planet of the Apes is a 2024 American science fiction action film directed by Wes Ball, serving as the fourth installment in the Planet of the Apes reboot series and the tenth film overall. It follows Noa, a young chimpanzee hunter, who embarks on a journey alongside Mae, a human woman, to determine the future for both apes and humans",
-    images: "images/Kingdom of the Planet of the Apes.png.jpeg",
+    images: "images/Kingdom of the Planet of the Apes.png",
     duration: "2hrs 25mins",
   },
   {
@@ -94,6 +94,7 @@ export const Data = [
     detail:
       "Batman ventures into Gotham City's underworld when a sadistic killer leaves behind a trail of cryptic clues. As the scale of the perpetrator's plans become clear, he must bring justice to the abuse of power and corruption that plagues the metropolis.",
     duration: "2h 56m",
+    images: "images/Batman.jpeg"
   },
   {
     id: 16,
@@ -116,15 +117,7 @@ export const Data = [
 
     duration: "2h 19m",
   },
-  {
-    id: 18,
-    movie_name: "The Marvel",
-    "release date ": "11 November 2022",
-    type: "action, Adventure",
-    detail:
-      "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. However, unintended consequences see her shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with two other superheroes to form the Marvels.",
-    images: "images/Captain.jpeg",
-  },
+
   {
     id: 19,
     movie_name: "The Tearsmith",

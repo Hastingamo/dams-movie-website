@@ -52,22 +52,14 @@ function Movies() {
         ) : (
           <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] xp:w-[42rem] bg-[#808080] md:overflow-x-hidden xs:w-[27rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[33.5rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem] xlg:w-[90rem]">
             <div className="flex flex-row mt-4 ml-5 md:ml-10 gap-10 lg:gap-52">
-              <div>
+              {/* <div>
                 <img
                   className="w-5 h-5 absolute top-7 left-[11rem] xm:left-[16rem] md:left-[18rem] md:w-8 md:h-8"
                   src="images/loupe.png"
                   alt=""
                 />
-              </div>
-              <Modal
-                title="Release date"
-                rating="Rating"
-                all="All"
-                cancel="images/cancel.png"
-                calendar="images/calendar.png"
-                ratings="images/star.png"
-                alls="images/all.png"
-              />
+              </div> */}
+ 
               <Search/>
              </div>
             <h1 className="mt-4 ml-4 text-2xl text-white">Popular</h1>
