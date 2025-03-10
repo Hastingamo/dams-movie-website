@@ -68,8 +68,8 @@ function Movies() {
                 ratings="images/star.png"
                 alls="images/all.png"
               />
-              {/* <Search/> */}
-            </div>
+              <Search/>
+             </div>
             <h1 className="mt-4 ml-4 text-2xl text-white">Popular</h1>
             <div className="ml-12">
               <Slider {...settings}>
