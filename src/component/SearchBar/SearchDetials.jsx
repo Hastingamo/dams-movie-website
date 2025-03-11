@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { detialss } from "../user/content copy";
+import { detial } from "../user/useDetail"
 
-const SearchBar = () => {
-  const [store] = useState(detialss);
+const SearchDetials = () => {
+  const [store] = useState(detial);
   const [data, setData] = useState("");
   const [display, setDisplay] = useState("");
 
@@ -67,4 +67,4 @@ const SearchBar = () => {
     </div>
   );
 };
-export default SearchBar;
+export default SearchDetials;
