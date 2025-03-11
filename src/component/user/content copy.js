@@ -128,6 +128,8 @@ export const detialss = [
     detail:
      "The Day of the Jackal, a Sky Atlantic series, is a modern adaptation of Frederick Forsyth's novel, focusing on a cold, calculating assassin hired to kill the French President, with Eddie Redmayne portraying the Jackal. ",
     duration: "1 season",
+    images: "images/jackal.jpeg",
+
   },
   {
     id: 14,

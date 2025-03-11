@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import { MoonLoader } from "react-spinners";
 import SearchDetials from "../../component/SearchBar/SearchDetials";
+import Footers from "../../component/Footer/Footers";
 
 function Cartoon() {
     const [loading, setLoading] = useState(false);
@@ -220,6 +221,7 @@ function Cartoon() {
                   />
                 </Slider>
               </div>
+              <Footers/>
             </div>
           )}
         </div>

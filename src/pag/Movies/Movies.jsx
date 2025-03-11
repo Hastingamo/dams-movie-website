@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { MoonLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import Search from "../../component/SearchBar/Search"
+import Footer from "../../component/Footer/Footer";
+import Footers from "../../component/Footer/Footers";
 
 function Movies() {
   const [loading, setLoading] = useState(false);
@@ -227,6 +229,7 @@ function Movies() {
                 />
               </Slider>
             </div>
+            <Footers/>
           </div>
         )}
       </div>

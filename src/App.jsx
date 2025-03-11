@@ -24,6 +24,9 @@ function App() {
         <Route path="SignUp" element={<SignUp />}></Route>
         <Route path="Profile" element={<Profile />}></Route>
       </Routes>
+      {/* <Footer/> */}
+
+
     </>
   );
 }

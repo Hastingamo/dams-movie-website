@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
 import { MoonLoader } from "react-spinners";
+import Footers from "../../component/Footer/Footers";
 // import { useState, useEffect } from 'react';
 
 function Home() {
@@ -127,6 +128,7 @@ function Home() {
                 />
               </Slider>
             </div>
+            <Footers/>
           </div>
         )}
       </div>

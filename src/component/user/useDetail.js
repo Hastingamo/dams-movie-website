@@ -96,6 +96,8 @@ export const detial = [
     type: "sci fi",
     detail:
       "Secret Level is a 15-episode adult animated anthology series on Amazon Prime Video, created by Tim Miller, featuring short stories set in various video game worlds, including 'Pac-Man,' 'Dungeons & Dragons,' and 'Warhammer 40,000'. ",
+      images: "images/Secret.jpeg",
+
     duration: "1 season",
   },
   {
@@ -106,6 +108,8 @@ export const detial = [
     detail:
       " Young Justice focuses on the lives of a group of teenage sidekicks attempting to establish themselves as proven superheroes as they deal with normal adolescent issues in their personal lives. The show corresponds to the present time of our world, a time period Vietti has called 'a new age of heroes'.",
     duration: "4 season",
+    images: "images/Young.jpeg",
+
   },
   {
     id: 12,

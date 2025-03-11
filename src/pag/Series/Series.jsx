@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { MoonLoader } from "react-spinners";
 import SearchBar from "../../component/SearchBar/SearchBar";
 import Search from "../../component/SearchBar/Search";
+import Footers from "../../component/Footer/Footers";
 
 function Series() {
   const [loading, setLoading] = useState(false);
@@ -227,6 +228,7 @@ function Series() {
                 />
               </Slider>
             </div>
+            <Footers/>
           </div>
            
           )
