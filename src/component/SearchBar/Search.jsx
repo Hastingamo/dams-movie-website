@@ -1,23 +1,34 @@
 import React, { useState } from "react";
 import { Data } from "../user/users";
-
+import { useEffect } from "react";
 const Search = () => {
   const [store] = useState(Data);
   const [data, setData] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
 
   const getData = (e) => {
     console.log(e.target.value);
     setData(e.target.value);
   };
 
-  let filterOut = store.filter((curValue) => {
-    return (
-      curValue.movie_name?.toLowerCase().includes(data.toLowerCase()) ||
-      curValue.duration?.toLowerCase().includes(data.toLowerCase())
-    );
-  });
-  const limitedData = filterOut.slice(0, 5);
-  const resultStyle = limitedData.length > 0 ? {} : { display: "none" };
+  useEffect(() => {
+    // Only perform filtering if `data` is not empty
+    if (data.trim() !== "") {
+      const filtered = store.filter((curValue) => {
+        return (
+          curValue.movie_name?.toLowerCase().includes(data.toLowerCase()) ||
+          curValue.duration?.toLowerCase().includes(data.toLowerCase())
+        );
+      });
+
+      setFilteredData(filtered);  // Update filtered data state
+    } else {
+      setFilteredData([]);  // If no input, reset filtered data
+    }
+  }, [data, store]);  // Runs whenever `data` or `store` changes
+
+  const limitedData = filteredData.slice(0, 5);
+  // const resultStyle = limitedData.length > 0 ? {} : { display: "none" };
 
 
   return (
@@ -32,7 +43,7 @@ const Search = () => {
         src="images/loupe.png"
         alt=""
       />
-      <div style={resultStyle}>
+    
         {limitedData.length > 0 ? (
           limitedData.map((curValue) => (
             <div
@@ -63,7 +74,6 @@ const Search = () => {
           <p>No results found</p>
         )}
       </div>
-    </div>
   );
 };
 export default Search;

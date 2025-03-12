@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Search from "../../component/SearchBar/Search"
 import Footer from "../../component/Footer/Footer";
 import Footers from "../../component/Footer/Footers";
+import Headerss from "../../component/Header/Headerss";
 
 function Movies() {
   const [loading, setLoading] = useState(false);
@@ -62,7 +63,8 @@ function Movies() {
                 />
               </div> */}
  
-              <Search/>
+              <Search/> 
+              <Headerss/>
              </div>
             <h1 className="mt-4 ml-4 text-2xl text-white">Popular</h1>
             <div className="ml-12">

@@ -24,7 +24,7 @@ function Headerss() {
           onClick={handleOutsideClick}
           className="inset-0 backdrop-blur-sm bg-opacity-30 bg-black  "
         >
-          <div className="w-32 absolute top-7 left-7 h-[15rem] flex flex-col bg-red-400">
+          <div className="w-32 absolute top-7 left-7 h-[15rem] flex flex-col bg-[#d3baba88]">
             <img
               onClick={close}
               className="w-5 h-5"

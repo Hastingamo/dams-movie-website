@@ -15,14 +15,14 @@ function Headers() {
           <Link to="Profile">Profile</Link>
         </nav>
       </header>
-      <header className=" h-10 w-full bg-red-500 flex flex-row xs:w-[27rem] xm:w-[33.6rem] sm:hidden">
+      <header className=" h-10 w-full bg-[#d3baba88] flex flex-row xs:w-[27rem] xm:w-[33.6rem] sm:hidden">
         {/* <h1 className="flex justify-center items-center">Dams</h1> */}
         <h1 className="ml-11">Dams</h1>
         <div className="ml-14 gap-8 flex flex-row">
           <Link to="Login">Login</Link>
           <Link to="SignUp">SignUp</Link>
         </div>
-        <Headerss className="ml-[2rem]"/>
+        {/* <Headerss className="ml-[2rem]"/> */}
       </header>
     </>
   );
