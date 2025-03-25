@@ -5,14 +5,17 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import { MoonLoader } from "react-spinners";
-import { Link } from "react-router-dom";
-import Search from "../../component/SearchBar/Search"
+import { data, Link } from "react-router-dom";
+import Search from "../../component/SearchBar/Search";
 import Footer from "../../component/Footer/Footer";
 import Footers from "../../component/Footer/Footers";
 import Headerss from "../../component/Header/Headerss";
+import { Data } from "../../component/user/users";
 
 function Movies() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); // Get the addToCart function from context
+
+
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -62,19 +65,20 @@ function Movies() {
                   alt=""
                 />
               </div> */}
- 
-              <Search/> 
-              <Headerss/>
-             </div>
+
+              <Search />
+              <Headerss />
+            </div>
             <h1 className="mt-4 ml-4 text-2xl text-white">Popular</h1>
             <div className="ml-12">
               <Slider {...settings}>
-                  <RotatingCard
-                    Captainmarvel="images/Venom.jpeg"
-                    info="images/info.png"
-                    love="images/info.png"
-                    share="images/info.png"
-                  />
+                <RotatingCard
+                  Captainmarvel="images/Venom.png"
+                  love="images/info.png"
+                  info="images/info.png"
+                  share="images/info.png"
+                />
+
                 <RotatingCard
                   Captainmarvel="images/Captain.png"
                   info="images/info.png"
@@ -231,7 +235,7 @@ function Movies() {
                 />
               </Slider>
             </div>
-            <Footers/>
+            <Footers />
           </div>
         )}
       </div>

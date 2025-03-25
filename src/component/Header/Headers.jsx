@@ -13,6 +13,12 @@ function Headers() {
           <Link to="Login">Login</Link>
           <Link to="SignUp">SignUp</Link>
           <Link to="Profile">Profile</Link>
+          <Link to="Anime">Anime</Link>
+          <Link to="AddToList">AddToList</Link>
+
+
+
+        
         </nav>
       </header>
       <header className=" h-10 w-full bg-[#d3baba88] flex flex-row xs:w-[27rem] xm:w-[33.6rem] sm:hidden">

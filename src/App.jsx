@@ -9,6 +9,9 @@ import SignUp from "./pag/Signup/SignUp";
 import Login from "./pag/Login/Login";
 import Profile from "./pag/porfile/Profile";
 import Rgister from "./pag/Register/Rgister";
+import Detail from "./pag/Detail/Detail";
+import Anime from "./pag/anime/Anime";
+import AddToList from "./pag/AddToList/AddToList";
 
 function App() {
   return (
@@ -23,8 +26,12 @@ function App() {
         <Route path="Login" element={<Login />}></Route>
         <Route path="SignUp" element={<SignUp />}></Route>
         <Route path="Profile" element={<Profile />}></Route>
+        <Route path="Detail/:id" element={<Detail/>}></Route>
+        <Route path="Anime" element={<Anime/>}></Route>
+        <Route path="AddToList" element={<AddToList/>}></Route>
+
+        
       </Routes>
-      {/* <Footer/> */}
 
 
     </>

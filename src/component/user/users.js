@@ -2,35 +2,38 @@ export const Data = [
   {
     id: 1,
     movie_name: "venom the last dance",
-    "release date ": "25 October 2024",
+    release: "25 October 2024",
     type: "action, drama",
     detail:
       "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
     images: "images/Venom.jpeg",
+    slug: "venom the last dance",
   },
   {
     id: 2,
     movie_name: "The Marvel",
-    "release date ": "11 November 2022",
+    release: "11 November 2022",
     type: "action, Adventure",
     detail:
       "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. However, unintended consequences see her shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with two other superheroes to form the Marvels.",
     images: "images/Captain.png",
+    slug: "The Marvel",
   },
   {
     id: 3,
     movie_name: "Kingdom of the Planet of the Apes",
-    "release date": "10 May 2024",
+    release: "10 May 2024",
     type: "action, Sci-fi",
     detail:
       "Kingdom of the Planet of the Apes is a 2024 American science fiction action film directed by Wes Ball, serving as the fourth installment in the Planet of the Apes reboot series and the tenth film overall. It follows Noa, a young chimpanzee hunter, who embarks on a journey alongside Mae, a human woman, to determine the future for both apes and humans",
     images: "images/Kingdom of the Planet of the Apes.png",
     duration: "2hrs 25mins",
+    slug: "Kingdom of the Planet of the Apes",
   },
   {
     id: 4,
     movie_name: "Deadpool & Wolverine",
-    "release date ": "25 July 2024",
+    release: "25 July 2024",
     type: "action, comedy",
     detail:
       "Deadpool's peaceful existence comes crashing down when the Time Variance Authority recruits him to help safeguard the multiverse. He soon unites with his would-be pal, Wolverine, to complete the mission and save his world from an existential threat.",
@@ -39,7 +42,7 @@ export const Data = [
   {
     id: 5,
     movie_name: "Canary Black",
-    "release date ": "3 October 2024",
+    release: "3 October 2024",
     type: "action, thriller",
     detail:
       "Avery Graves, a CIA operative, is blackmailed by terrorists into betraying her own country to save her kidnapped husband. Cut off from her team, she turns to her underworld contacts to survive",
@@ -49,7 +52,7 @@ export const Data = [
   {
     id: 8,
     movie_name: "Rebel Moon",
-    "release date ": "15 December 2023",
+    release: "15 December 2023",
     type: "action, sci-fi",
     detail:
       "Kora, a former Imperium soldier, ventures on a quest to recruit warriors from across the galaxy to make a stand against the Imperium before they return to Veldt",
@@ -59,7 +62,7 @@ export const Data = [
   {
     id: 9,
     movie_name: "Rebel Ridge",
-    "release date ": "6 September 2024",
+    release: "6 September 2024",
     type: "action, thriller",
     detail:
       "A former Marine confronts corruption in a small town when local law enforcement unjustly seizes the bag of cash he needs to post his cousin's bail.",
@@ -69,7 +72,7 @@ export const Data = [
   {
     id: 11,
     movie_name: "Your Fault",
-    "release date ": "18 December 2024",
+    release: "18 December 2024",
     type: "romanance, drama",
     detail:
       "Noah and Nick's relationship seems unwavering despite their parents' attempts to separate them. Nick is willing to strengthen his relationship with Noah and prove that he is no longer the Nick he used to be: the one who was into fighting, racing, and girls. Nick starts working for his father's law firm alongside an attractive colleague, Sophia; and Noah goes to college, where she shares an apartment with Briar, an enigmatic and fun girl who hides a dark secret behind her smile",
@@ -79,7 +82,7 @@ export const Data = [
   {
     id: 14,
     movie_name: "UGLIES",
-    "release date ": "6 September 2024",
+    release: "6 September 2024",
     type: "drama",
     detail:
       "Uglies by Scott Westerfeld is the first book in a dystopian trilogy set in a future society where everyone undergoes a mandatory cosmetic surgery at age sixteen to become “Pretty.” This transformation is meant to create physical equality and erase any imperfections, leaving everyone looking flawless and uniform. The society’s obsession with beauty and perfection is central to the world Westerfeld creates.",
@@ -89,7 +92,7 @@ export const Data = [
   {
     id: 15,
     movie_name: "Batman",
-    "release date ": "4 March 2022",
+    release: "4 March 2022",
     type: "action, drama",
     detail:
       "Batman ventures into Gotham City's underworld when a sadistic killer leaves behind a trail of cryptic clues. As the scale of the perpetrator's plans become clear, he must bring justice to the abuse of power and corruption that plagues the metropolis.",
@@ -99,7 +102,7 @@ export const Data = [
   {
     id: 16,
     movie_name: "Back in Action",
-    "release date ": "17 January 2025",
+    release: "17 January 2025",
     type: "action, comedy",
     detail:
       "Former CIA spies Emily and Matt are pulled back into espionage after their secret identities are exposed.",
@@ -109,7 +112,7 @@ export const Data = [
   {
     id: 17,
     movie_name: "Divergent",
-    "release date ": "21 March 2014",
+    release: "21 March 2014",
     type: "action, Sci-fi",
     detail:
       "Tris Prior (Shailene Woodley) lives in a futuristic world in which society is divided into five factions. As each person enters adulthood, he or she must choose a faction and commit to it for life. Tris chooses Dauntless -- those who pursue bravery above all else. However, her initiation leads to the discovery that she is a Divergent and will never be able to fit into just one faction. Warned that she must conceal her status, Tris uncovers a looming war which threatens everyone she loves.",
@@ -121,7 +124,7 @@ export const Data = [
   {
     id: 19,
     movie_name: "The Tearsmith",
-    "release date ": "4 April 2024",
+    release: "4 April 2024",
     type: "action, drama",
     detail:
       "Sometimes one's greatest fear is accepting that someone can honestly love them for who they are. Nica and Rigel are ready to find it out together.",
@@ -141,7 +144,7 @@ export const Data = [
   {
     id: 22,
     movie_name: "Upgraded",
-    "release date ": "15 December 2023",
+    release: "15 December 2023",
     type: "romanance, comedy",
     detail:
       "An aspiring art intern is invited on a last-minute work trip to London, where she meets a handsome stranger.",
@@ -151,7 +154,7 @@ export const Data = [
   {
     id: 23,
     movie_name: "Your Fault",
-    "release date ": "18 December 2024",
+    release: "18 December 2024",
     type: "romanance, drama",
     detail:
       "Noah and Nick's relationship seems unwavering despite their parents' attempts to separate them. Nick is willing to strengthen his relationship with Noah and prove that he is no longer the Nick he used to be: the one who was into fighting, racing, and girls. Nick starts working for his father's law firm alongside an attractive colleague, Sophia; and Noah goes to college, where she shares an apartment with Briar, an enigmatic and fun girl who hides a dark secret behind her smile",
@@ -161,7 +164,7 @@ export const Data = [
   {
     id: 24,
     movie_name: "A True Gentleman",
-    "release date ": "26 september 2023",
+    release: "26 september 2023",
     type: "romanance",
     detail:
       "tells the story of Saygin, a charming man who lives a glamorous life as a gigolo, captivating wealthy women with his charisma, but secretly struggling with deep unhappiness and emotional emptiness; his life takes a drastic turn when he meets Nehir, a young woman who challenges his perspective on love and forces him to confront his true desires and needs",
