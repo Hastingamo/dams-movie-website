@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Data } from "../user/users";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 const Search = () => {
   const [store] = useState(Data);
   const [data, setData] = useState("");
@@ -21,15 +22,14 @@ const Search = () => {
         );
       });
 
-      setFilteredData(filtered);  // Update filtered data state
+      setFilteredData(filtered); // Update filtered data state
     } else {
-      setFilteredData([]);  // If no input, reset filtered data
+      setFilteredData([]); // If no input, reset filtered data
     }
-  }, [data, store]);  // Runs whenever `data` or `store` changes
+  }, [data, store]); // Runs whenever `data` or `store` changes
 
   const limitedData = filteredData.slice(0, 5);
   // const resultStyle = limitedData.length > 0 ? {} : { display: "none" };
-
 
   return (
     <div className="container">
@@ -43,13 +43,14 @@ const Search = () => {
         src="images/loupe.png"
         alt=""
       />
-    
-        {limitedData.length > 0 ? (
-          limitedData.map((curValue) => (
-            <div
-              key={curValue.id || curValue.movie_name}
-              className={"flex flex-row ml-4 gap-8"}
-            >
+
+      {limitedData.length > 0 ? (
+        limitedData.map((curValue) => (
+          <Link
+            to={`/Detail/${curValue.id}`}
+            key={curValue.id || curValue.movie_name}
+          >
+            <div className={"flex flex-row ml-4 gap-8"}>
               {/* Ensure you use proper property names */}
               <div className="flex flex-row gap-6">
                 <div>
@@ -63,17 +64,19 @@ const Search = () => {
                   <p className="mt-5 text-2xl md:text-3xl">
                     {curValue.movie_name || "No name available"}
                   </p>
+
                   <p className="mt-3 md:text-2xl">
                     {curValue.duration || "No brand available"}
                   </p>
                 </div>
               </div>
             </div>
-          ))
-        ) : (
-          <p>No results found</p>
-        )}
-      </div>
+          </Link>
+        ))
+      ) : (
+        <p>No results found</p>
+      )}
+    </div>
   );
 };
 export default Search;
