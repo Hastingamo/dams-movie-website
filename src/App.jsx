@@ -12,16 +12,8 @@ import Rgister from "./pag/Register/Rgister";
 import Detail from "./pag/Detail/Detail";
 import Anime from "./pag/anime/Anime";
 import AddToList from "./pag/AddToList/AddToList";
-import { useState } from "react";
 
 function App() {
-  const [List, setList] = useState([]);
-
-  const addToList = (movie) => {
-    if (!List.some((fav) => fav.id === movie.id)) {
-      setList([...List, movie]);
-    }
-  };
   return (
     <>
       <Headers />
@@ -34,10 +26,9 @@ function App() {
         <Route path="Login" element={<Login />}></Route>
         <Route path="SignUp" element={<SignUp />}></Route>
         <Route path="Profile" element={<Profile />}></Route>
-        <Route path="Detail/:id" element={<Detail addToList={addToList} />}></Route>
+        <Route path="Detail/:id" element={<Detail/>}></Route>
         <Route path="Anime" element={<Anime/>}></Route>
         <Route path="AddToList" element={<AddToList/>}></Route>
-        <Route path="/List" element={<AddToList List={List} />} />
 
 
         

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { detialss } from "../user/content copy";
 import { useEffect } from "react";
-
+import { you } from "../user/they";
 const SearchBar = () => {
-  const [store] = useState(detialss);
+  const [store] = useState(you);
   const [data, setData] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const getData = (e) => {

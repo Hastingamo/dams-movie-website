@@ -13,7 +13,6 @@ function Headers() {
           <Link to="Login">Login</Link>
           <Link to="SignUp">SignUp</Link>
           <Link to="Profile">Profile</Link>
-          <Link to="Anime">Anime</Link>
           <Link to="AddToList">AddToList</Link>
 
 
