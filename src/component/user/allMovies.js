@@ -8,6 +8,7 @@ export const All = [
       "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
     images: "images/Venom.jpeg",
     slug: "venom the last dance",
+    AuthorName: "ve"
   },
   {
     id: 2,
