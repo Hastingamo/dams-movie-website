@@ -28,7 +28,7 @@ function Detail() {
     }
   };
   return (
-    <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] xp:w-[42rem] bg-[#808080] md:overflow-x-hidden xs:w-[27rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem] sm:w-[50rem]  md:h-ful md:w-[33.5rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem] xlg:w-[90rem]">
+    <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] xp:w-[42rem] bg-[#808080] md:overflow-x-hidden xs:w-[27rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem] sm:w-[16rem]  md:h-ful md:w-[33.5rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem] xlg:w-[90rem]">
       <div className="flex flex-row gap-4 flex-wrap xs:gap-6 xm:gap-8 xp:gap-10">
         {/* <img className="w-[20rem] h-[20rem]" src={movies.images} alt="" /> */}
         <div>
@@ -41,6 +41,7 @@ function Detail() {
             }}
           ></img>
           <p className="ml-10 text-2xl mt-10">cast</p>
+          <img className="w-5 h-5" src={`/${movie.AuthorImages}`} alt="" />
           <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xp:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 px-5"></div>
         </div>
 
@@ -50,7 +51,7 @@ function Detail() {
           <p>Genre: {movie.type}</p>
           <p>Release: {movie.release}</p>
           <p className="w-[13rem] xm:w-[18rem]  sm:w-[22rem] xp:w-[25rem] lg:w-[25rem]">
-            {movie.detail}
+            overview: {movie.detail}
           </p>
           <img
             onClick={addToFavorites}

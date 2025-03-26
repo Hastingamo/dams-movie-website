@@ -8,7 +8,8 @@ export const All = [
       "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters from Venom's home world.",
     images: "images/Venom.jpeg",
     slug: "venom the last dance",
-    AuthorName: "ve"
+    AuthorName: "Tom Hardy",
+    AuthorImages: "https://pin.it/3hKMBCUCx"
   },
   {
     id: 2,
@@ -478,12 +479,12 @@ export const All = [
   },
   {
     id: 48,
-    movie_name: "Xo Kitty",
-    release : "18 May 2023",
-    type: "Romance",
+    movie_name: "The recuirt",
+    release : "16 December 2022",
+    type: "Romance, action",
     detail:
-      "XO, Kitty is a Netflix spin-off series from To All the Boys I've Loved Before, focusing on Kitty Song Covey, who moves to Seoul to attend her mother's former high school, KISS, and navigates love, family, and the complexities of a new life. ",
-    images: "images/XoKitty.jpeg",
+      "The Recruit is a Netflix spy adventure series following Owen Hendricks, a young CIA lawyer, who gets entangled in a dangerous international conspiracy when a former asset threatens to expose agency secrets.  ",
+    images: "images/Recruit.jpeg",
     duration: "2 season",
   },
 

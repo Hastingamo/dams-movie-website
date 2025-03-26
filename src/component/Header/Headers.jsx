@@ -5,13 +5,12 @@ function Headers() {
   return (
     <>
       <header className="sm:sticky">
-        <nav className="hidden  w-[14.8rem] h-screen bg-[#515050] sm:flex flex-col text-white text-4xl font-normal italic pl-11 pt-14 gap-10">
+        <nav className="hidden  w-[14.8rem] h-screen bg-[#515050] sm:flex flex-col text-white text-4xl font-normal italic pl-11 pt-4 gap-10">
           <Link to="Home">Home</Link>
           <Link to="Series">Series</Link>
           <Link to="Movies">Movies</Link>
           <Link to="Cartoon">Cartoon</Link>
           <Link to="Login">Login</Link>
-          <Link to="SignUp">SignUp</Link>
           <Link to="Profile">Profile</Link>
           <Link to="AddToList">AddToList</Link>
 
