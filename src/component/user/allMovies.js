@@ -50,7 +50,7 @@ export const All = [
     duration: "1hr 41mins",
   },
   {
-    id: 8,
+    id: 6,
     movie_name: "Rebel Moon",
     release: "15 December 2023",
     type: "action, sci-fi",
@@ -60,7 +60,7 @@ export const All = [
     duration: "2h 14m",
   },
   {
-    id: 9,
+    id: 7,
     movie_name: "Rebel Ridge",
     release: "6 September 2024",
     type: "action, thriller",
@@ -70,7 +70,7 @@ export const All = [
     duration: "2h 11m",
   },
   {
-    id: 11,
+    id: 8,
     movie_name: "Your Fault",
     release: "18 December 2024",
     type: "romanance, drama",
@@ -80,7 +80,7 @@ export const All = [
     duration: "1h 55m",
   },
   {
-    id: 14,
+    id: 9,
     movie_name: "UGLIES",
     release: "6 September 2024",
     type: "drama",
@@ -90,7 +90,7 @@ export const All = [
     duration: "1h 42m",
   },
   {
-    id: 15,
+    id: 10,
     movie_name: "Batman",
     release: "4 March 2022",
     type: "action, drama",
@@ -100,7 +100,7 @@ export const All = [
     images: "images/Batman.jpeg"
   },
   {
-    id: 16,
+    id: 11,
     movie_name: "Back in Action",
     release: "17 January 2025",
     type: "action, comedy",
@@ -110,7 +110,7 @@ export const All = [
     duration: "1h 52mins",
   },
   {
-    id: 17,
+    id: 12,
     movie_name: "Divergent",
     release: "21 March 2014",
     type: "action, Sci-fi",
@@ -122,7 +122,7 @@ export const All = [
   },
 
   {
-    id: 19,
+    id: 13,
     movie_name: "The Tearsmith",
     release: "4 April 2024",
     type: "action, drama",
@@ -132,7 +132,7 @@ export const All = [
     duration: "1h 45m",
   },
   {
-    id: 20,
+    id: 14,
     movie_name: "The Idea Of You",
     release  : "15 December 2023",
     type: "romanance, comedy",
@@ -142,7 +142,7 @@ export const All = [
     duration: "1h 55m",
   },
   {
-    id: 22,
+    id: 15,
     movie_name: "Upgraded",
     release: "15 December 2023",
     type: "romanance, comedy",
@@ -152,7 +152,7 @@ export const All = [
     duration: "1h 44m",
   },
   {
-    id: 23,
+    id: 16,
     movie_name: "Your Fault",
     release: "18 December 2024",
     type: "romanance, drama",
@@ -162,7 +162,7 @@ export const All = [
     duration: "1h 55m",
   },
   {
-    id: 24,
+    id: 17,
     movie_name: "A True Gentleman",
     release: "26 september 2023",
     type: "romanance",
@@ -172,7 +172,7 @@ export const All = [
     duration: "1h 50m",
   },
   {
-    id: 25,
+    id: 18,
     movie_name: "Avatar",
     release: "21 February 2005",
     type: "Action",
@@ -182,7 +182,7 @@ export const All = [
     duration: "4 season",
   },
   {
-    id: 26,
+    id: 19,
     movie_name: "Big Hero six",
     release: "7 November 2014",
     type: "family, action",
@@ -192,7 +192,7 @@ export const All = [
     duration: "1hr 48mins",
   },
   {
-    id: 27,
+    id: 20,
     movie_name: "moana",
     release: "November 23, 2016",
     type: "family, adventure",
@@ -202,7 +202,7 @@ export const All = [
     duration: "1hr 47mins",
   },
   {
-    id: 28,
+    id: 21,
     movie_name: "arcane",
     release: "6 November 2021",
     type: "action",
@@ -212,7 +212,7 @@ export const All = [
     duration: "2 season",
   },
   {
-    id: 29,
+    id: 22,
     movie_name: "Kung panda",
     release: "4 July 2008",
     type: "family, comedy",
@@ -222,7 +222,7 @@ export const All = [
     duration: "1hr 32mins",
   },
   {
-    id: 30,
+    id: 23,
     movie_name: "Invicible",
     release: "25 March 2021",
     type: "drama",
@@ -232,7 +232,7 @@ export const All = [
     duration: "3 season",
   },
   {
-    id: 31,
+    id: 24,
     movie_name: "Love and Robot",
     release: "15 March 2019",
     type: "horror",
@@ -242,7 +242,7 @@ export const All = [
     duration: "3 season",
   },
   {
-    id: 32,
+    id: 25,
     movie_name: "Puss in Boot",
     release: "12 August 2013. ",
     type: "family, adventure",
@@ -252,7 +252,7 @@ export const All = [
     duration: "1hr 30mins",
   },
   {
-    id: 33,
+    id: 26,
     movie_name: "Garfeild and friends",
     release: "17 September 1988",
     type: "cartoon",
@@ -262,7 +262,7 @@ export const All = [
     duration: "7 season",
   },
   {
-    id: 34,
+    id: 27,
     movie_name: "Secret level",
     release: "10 December 2024",
     type: "sci fi",
@@ -273,7 +273,7 @@ export const All = [
     duration: "1 season",
   },
   {
-    id: 35,
+    id: 28,
     movie_name: "Young Justice",
     release: "26 November 2010",
     type: "sci fi",
@@ -284,7 +284,7 @@ export const All = [
 
   },
   {
-    id: 36,
+    id: 29,
     movie_name: "Pj mask",
     release: "18 September 2015",
     type: "adventure",
@@ -294,7 +294,7 @@ export const All = [
     duration: "5 season",
   },
   {
-    id: 37,
+    id: 30,
     movie_name: "Bad guys",
     release: "15 April 2022",
     type: "family, comedy",
@@ -304,7 +304,7 @@ export const All = [
     duration: "‧ 1hr 40mins",
   },
   {
-    id: 38,
+    id: 31,
     movie_name: "Ben 10",
     release: "27 December 2005",
     type: "sci- fi",
@@ -314,7 +314,7 @@ export const All = [
     duration: "3 season",
   },
   {
-    id: 39,
+    id: 32,
     movie_name: "Shrek",
     release: "22 April 2001",
     type: "comedy fantasy",
@@ -324,7 +324,7 @@ export const All = [
     duration: "1hr 29mins",
   },
   {
-    id: 40,
+    id: 33,
     movie_name: "SgoobDo",
     release: "September 13, 1969.",
     type: "mystery",
@@ -334,7 +334,7 @@ export const All = [
     duration: "3 season",
   },
   {
-    id: 41,
+    id: 34,
     movie_name: "Minions",
     release: "10 July 2015",
     type: "family, adventure",
@@ -344,7 +344,7 @@ export const All = [
     duration: " 1hr 31mins",
   },
   {
-    id: 42,
+    id: 35,
     movie_name: "Ozark",
     release: "21 July 2017",
     type: "drama",
@@ -354,7 +354,7 @@ export const All = [
     duration: "4 season",
   },
   {
-    id: 43,
+    id: 36,
     movie_name: "Breaking Bad",
     release: "20 January 2008",
     type: "drama",
@@ -364,7 +364,7 @@ export const All = [
     duration: "5 season",
   },
   {
-    id: 44,
+    id: 37,
     movie_name: "body Problem",
     release: "21 March 2024",
     type: "thriller",
@@ -374,7 +374,7 @@ export const All = [
     duration: "1 season",
   },
   {
-    id: 45,
+    id: 38,
     movie_name: "Cruel Intentions",
     "release date ": "21 November 2024",
     type: "drama",
@@ -384,7 +384,7 @@ export const All = [
     duration: "1 season",
   },
   {
-    id: 46,
+    id: 39,
     movie_name: "behind Her Eyes",
     release: "17 February 2021",
     type: "Thriller",
@@ -394,7 +394,7 @@ export const All = [
     duration: "1 season",
   },
   {
-    id: 47,
+    id: 40,
     movie_name: "Geek girl",
     release: "30 May 2024",
     type: "action, sci-fi",
@@ -404,7 +404,7 @@ export const All = [
     duration: "1 season",
   },
   {
-    id: 48,
+    id: 41,
     movie_name: "The GentleMen",
     release: "7 March 2024",
     type: "drama",
@@ -414,7 +414,7 @@ export const All = [
     duration: "1 season",
   },
   {
-    id: 49,
+    id: 42,
     movie_name: "You",
     release: "9 September 2018",
     type: "Thriller",
@@ -424,7 +424,7 @@ export const All = [
     duration: "4 season",
   },
   {
-    id: 50,
+    id: 43,
     movie_name: "Money Hesit",
     release: "2 May 2017",
     type: "Thriller ",
@@ -434,7 +434,7 @@ export const All = [
     duration: "5 season",
   },
   {
-    id: 51,
+    id: 44,
     movie_name: "The Boys",
     release: "26 July 2019",
     type: "drama",
@@ -444,7 +444,7 @@ export const All = [
     duration: "4 season",
   },
   {
-    id: 52,
+    id: 45,
     movie_name: "Fall Out",
     release : "April 10, 2024",
     type: "drama",
@@ -455,7 +455,7 @@ export const All = [
   },
 
   {
-    id: 53,
+    id: 46,
     movie_name: "Cross",
     release : "14 November 2024",
     type: "action, drama",
@@ -465,7 +465,7 @@ export const All = [
     images: "images/Cross.jpeg",
   },
   {
-    id: 54,
+    id: 47,
     movie_name: "jackal",
     release : "7 November 2024",
     type: "Thriller",
@@ -476,7 +476,7 @@ export const All = [
 
   },
   {
-    id: 55,
+    id: 48,
     movie_name: "Xo Kitty",
     release : "18 May 2023",
     type: "Romance",
@@ -487,7 +487,7 @@ export const All = [
   },
 
   {
-    id: 56,
+    id: 49,
     movie_name: "Summer i turned pretty",
     release : "17 June 2022",
     type: "romanance",
@@ -497,7 +497,7 @@ export const All = [
     duration: "3 season",
   },
   {
-    id: 57,
+    id: 50,
     movie_name: "Ginny george",
     release : "24 February 2021",
     type: "drama",
