@@ -482,7 +482,7 @@ export const All = [
     type: "Romance",
     detail:
       "XO, Kitty is a Netflix spin-off series from To All the Boys I've Loved Before, focusing on Kitty Song Covey, who moves to Seoul to attend her mother's former high school, KISS, and navigates love, family, and the complexities of a new life. ",
-    images: "public/images/XoKitty.jpeg",
+    images: "images/XoKitty.jpeg",
     duration: "2 season",
   },
 
