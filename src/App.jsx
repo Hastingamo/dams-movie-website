@@ -21,7 +21,7 @@ function App() {
         <div>
           <Routes>
             <Route path="" element={<Rgister />}></Route>
-            <Route path="Home" element={<Home />}></Route>
+            {/* <Route path="Home" element={<Home />}></Route> */}
             <Route path="Movies" element={<Movies />}></Route>
             <Route path="Series" element={<Series />}></Route>
             <Route path="Cartoon" element={<Cartoon />}></Route>
