@@ -29,7 +29,7 @@ function Anime() {
             // data-testid="loader"
           />
         ) : (
-            <div className="h-screen overflow-x-hidden bg-[#808080] md:bg-[#DADADA]">
+            <div className="h-screen overflow-x-hidden w-screen bg-[#808080] md:bg-[#DADADA]">
             <div>
               <div className="flex flex-row mt-4 ml-5 md:ml-10 gap-10 lg:gap-52 ">
                 <Search />
