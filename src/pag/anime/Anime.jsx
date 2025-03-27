@@ -20,7 +20,7 @@ function Anime() {
       <div>
         {loading ? (
           <MoonLoader
-          className="mx-auto mt-40"
+            className="mx-auto mt-40"
             color={"black"}
             loading={loading}
             // cssOverride={override}
@@ -29,12 +29,12 @@ function Anime() {
             // data-testid="loader"
           />
         ) : (
-            <div className="h-screen overflow-x-hidden w-screen bg-[#808080] md:bg-[#DADADA]">
+          <div className="h-screen overflow-x-hidden bg-[#808080] md:bg-[#DADADA]">
             <div>
               <div className="flex flex-row mt-4 ml-5 md:ml-10 gap-10 lg:gap-52 ">
                 <Search />
               </div>
-              <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xp:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 px-5">
+              <div className="container mx-auto px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-6">
                 {All.slice(0, 17).map((movies) => (
                   <div
                     className="flex flex-row mt-4 ml-5 md:ml-4 gap-10 lg:gap-52 "
