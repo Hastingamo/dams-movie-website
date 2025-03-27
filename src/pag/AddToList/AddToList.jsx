@@ -50,7 +50,6 @@ function AddToList() {
             ))}
           </div>
         </div>
-        <Footers/>
       </div>
     </>
   );
