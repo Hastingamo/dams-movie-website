@@ -39,7 +39,7 @@ function Detail() {
   };
   return (
     <div className=" h-screen overflow-x-hidden xp:overflow-x-hidden bg-[#808080] md:overflow-x-hidden xs:overflow-x-hidden xm:overflow-x-hidden md:bg-[#DADADA]">
-      <div className="flex flex-row gap-4 flex-wrap xs:gap-6 xm:gap-8 xp:gap-10">
+      <div className="flex flex-row gap-4  xs:gap-6 xm:gap-8 xp:gap-10">
         {/* <img className="w-[20rem] h-[20rem]" src={movies.images} alt="" /> */}
         <div>
           <img

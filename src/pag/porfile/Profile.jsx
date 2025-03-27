@@ -56,7 +56,7 @@ function Profile() {
           <button className="btn btn-primary  w-16 h-16 bg-black text-white items-center" onClick={handleLogout}>
             Logout
           </button>
-          <button onClick={()=>navigate("/Movies")} className="btn btn-primary  w-16 h-16 bg-black text-white items-center">
+          <button onClick={()=>navigate("/Home")} className="btn btn-primary  w-16 h-16 bg-black text-white items-center">
             home
           </button>
         </>
