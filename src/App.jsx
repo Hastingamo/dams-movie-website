@@ -33,6 +33,7 @@ function App() {
             <Route path="/Series" element={<Series />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/SignUp" element={<SignUp />} />
+            
           </Routes>
         </div>
       </div>
