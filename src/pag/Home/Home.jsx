@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import AddToList from "../AddToList/AddToList";
 import MoviesDetails from "../MoviesDetail/MoviesDetails";
+import Footers from "../../component/Footer/Footers";
 function Home() {
   const { id } = useParams();
 
@@ -74,6 +75,7 @@ function Home() {
                   </Link>
                 ))}
               </div>
+              <Footers/>
             </div>
           )}
         </div>
