@@ -1,43 +1,39 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Headers from "./components/Header/Headers";
-import Home from "./pages/Home";
-import Movies from "./pages/Movies";
-import Series from "./pages/Series";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pag/Home/Home";
+import Movies from "./pag/Movies/Movies";
+import Series from "./pag/Series/Series";
+import Headers from "./component/Header/Headers";
+import Cartoon from "./pag/cartoon/Cartoon";
+import SignUp from "./pag/Signup/SignUp";
+import Login from "./pag/Login/Login";
+import Profile from "./pag/porfile/Profile";
+import Rgister from "./pag/Register/Rgister";
+import Detail from "./pag/Detail/Detail";
+import Anime from "./pag/anime/Anime";
+import AddToList from "./pag/AddToList/AddToList";
 
 function App() {
   return (
-    <Router>
-      <div className="flex">
-        {/* Desktop Header (Sidebar) */}
-        <div className="hidden sm:flex">
-          <Headers />
-        </div>
-
-        {/* Main Content */}
-        <div className="w-full">
-          {/* Mobile Header (Visible only on small screens) */}
-          <header className="sm:hidden w-full h-12 bg-[#d3baba88] flex items-center justify-between px-6">
-            <h1>Dams</h1>
-            <div className="flex gap-4">
-              <a href="/Login">Login</a>
-              <a href="/SignUp">SignUp</a>
-            </div>
-          </header>
-
-          {/* Routes */}
+    <>
+      <div className="xs:flex xs:flex-col md:flex-row md:flex h-screen">
+        <Headers />
+        <div>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Movies" element={<Movies />} />
-            <Route path="/Series" element={<Series />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/SignUp" element={<SignUp />} />
-            
+            <Route path="" element={<Rgister />}></Route>
+            {/* <Route path="Home" element={<Home />}></Route> */}
+            <Route path="Movies" element={<Movies />}></Route>
+            <Route path="Series" element={<Series />}></Route>
+            <Route path="Cartoon" element={<Cartoon />}></Route>
+            <Route path="Login" element={<Login />}></Route>
+            <Route path="SignUp" element={<SignUp />}></Route>
+            <Route path="Profile" element={<Profile />}></Route>
+            <Route path="Detail/:id" element={<Detail />}></Route>
+            <Route path="Anime" element={<Anime />}></Route>
+            <Route path="AddToList" element={<AddToList />}></Route>
           </Routes>
         </div>
       </div>
-    </Router>
+    </>
   );
 }
 

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { MoonLoader } from "react-spinners";
 import SearchDetials from "../../component/SearchBar/SearchDetials";
 import { All } from "../../component/user/allMovies";
+import Footers from "../../component/Footer/Footers";
 
 function Animess() {
   const [loading, setLoading] = useState(false); // Get the addToCart function from context
@@ -58,6 +59,7 @@ function Animess() {
                 ))}
               </div>
             </div>
+            <Footers/>
           </div>
         )}
       </div>

@@ -38,11 +38,11 @@ const Search = () => {
         onChange={getData}
         className="border-black border-solid border rounded p-1 text-black xm:text-2xl md:text-2xl md:p-2"
       ></input>
-      <img
+      {/* <img
         className="w-5 h-5 absolute top-7 left-[11rem] xm:left-[16rem] md:left-[18rem] md:w-8 md:h-8"
         src="images/loupe.png"
         alt=""
-      />
+      /> */}
 
       {limitedData.length > 0 ? (
         limitedData.map((curValue) => (

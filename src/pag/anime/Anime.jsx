@@ -1,10 +1,11 @@
 import React from "react";
-import { Data } from "../../component/user/users";
+// import { Data } from "../../component/user/users";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Search from "../../component/SearchBar/Search";
 import { MoonLoader } from "react-spinners";
 import { All } from "../../component/user/allMovies";
+import Footers from "../../component/Footer/Footers";
 
 function Anime() {
   const [loading, setLoading] = useState(false); // Get the addToCart function from context
@@ -60,6 +61,7 @@ function Anime() {
                 ))}
               </div>
             </div>
+            <Footers/>
           </div>
         )}
       </div>

@@ -40,8 +40,8 @@ function Detail() {
               e.target.src = "/images/placeholder.jpg";
             }}
           ></img>
-          <p className="ml-10 text-2xl mt-10">cast</p>
-          <img className="w-5 h-5" src={`/${movie.AuthorImages}`} alt="" />
+          {/* <p className="ml-10 text-2xl mt-10">cast</p>
+          <img className="w-5 h-5" src={`/${movie.AuthorImages}`} alt="" /> */}
           <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xp:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 px-5"></div>
         </div>
 
@@ -61,7 +61,7 @@ function Detail() {
           />{" "}
         </div>
       </div>
-      <h1 className="mt-16">you may also like</h1>
+      <h1 className="mt-16 xm:ml-4 xp:ml-8">you may also like</h1>
       <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xp:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 px-5">
         {" "}
         {recommendedMovies.map((rec) => (
