@@ -25,7 +25,9 @@ function AddToList() {
         <div className="ml-3">
           {" "}
           <h2>Favorite Movies</h2>
-          <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xp:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 px-5">            {favorites.map((movie) => (
+          <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xp:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 px-5">
+            {" "}
+            {favorites.map((movie) => (
               <Link
                 key={movie.id}
                 to={`/Detail/${movie.id}`}

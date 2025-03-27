@@ -12,6 +12,8 @@ function Footers() {
         <button onClick={() => navigate("/Cartoon")}>Cartoon</button>
         <button onClick={() => navigate("/Profile")}>Profile</button>
         <button onClick={() => navigate("/AddToList")}>AddToList</button>
+        <button onClick={() => navigate("/MoviesDetails")}>MoviesDetails</button>
+
       </div>
       <div className="hidden md:flex md:flex-col">
         <h1 className="ml-32 text-2xl mt-5 md:ml-24 xp:ml-32 xp:text-3xl lg:mt-8 lg:ml-60 xl:ml-[22rem]">

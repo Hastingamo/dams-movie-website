@@ -71,7 +71,7 @@ function Detail() {
                 src="/images/like.png"
                 alt="Like"
               />{" "}
-              <p>add to list</p>
+              <p>add to favorites</p>
             </div>
             <div className="flex flex-col">
               <img
@@ -80,7 +80,7 @@ function Detail() {
                 src="/images/all.png"
                 alt="Like"
               />{" "}
-              <p>add to favorites</p>
+              <p>add to list</p>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ function Detail() {
           </Link>
         ))}
       </div>
-      <Footers className="mt-[40rem]" />
+      <Footers />
     </div>
   );
 }
