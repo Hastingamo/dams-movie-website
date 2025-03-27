@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { detial } from "../user/useDetail";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const SearchDetials = () => {
   const [store] = useState(detial);
@@ -10,7 +11,6 @@ const SearchDetials = () => {
   const getData = (e) => {
     console.log(e.target.value);
     setData(e.target.value);
-
   };
 
   useEffect(() => {
@@ -46,7 +46,8 @@ const SearchDetials = () => {
       /> */}
       {limitedData.length > 0 ? (
         limitedData.map((curValue) => (
-          <div
+          <Link
+            to={`/Detail/${curValue.id}`}
             key={curValue.id || curValue.name}
             className="flex flex-row ml-4 gap-8"
           >
@@ -68,7 +69,7 @@ const SearchDetials = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
         ))
       ) : (
         <p>No results found</p>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { you } from "../user/they";
+import { Link } from "react-router-dom";
 const SearchBar = () => {
   const [store] = useState(you);
   const [data, setData] = useState("");
@@ -43,7 +44,8 @@ const SearchBar = () => {
       /> */}
       {limitedData.length > 0 ? (
         limitedData.map((curValue) => (
-          <div
+          <Link
+            to={`/Detail/${curValue.id}`}
             key={curValue.id || curValue.name}
             className="flex flex-row ml-4 gap-8"
           >
@@ -65,7 +67,7 @@ const SearchBar = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
         ))
       ) : (
         <p>No results found</p>
