@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Footers from "../../component/Footer/Footers";
 
 function AddToList() {
   const [favorites, setFavorites] = useState([]);
@@ -49,6 +50,7 @@ function AddToList() {
             ))}
           </div>
         </div>
+        <Footers/>
       </div>
     </>
   );

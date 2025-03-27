@@ -30,7 +30,7 @@ function Home() {
         <div>
           {loading ? (
             <MoonLoader
-              className="ml-[7rem] mt-64 xm:ml-[12rem] xm:mt-48 md:ml-[25rem] md:-mt-[40rem] lg:ml-[32rem] lg:-mt-[50rem] xl:ml-[40rem] xl:-mt-96"
+              className="ml-[7rem] mt-64 xm:ml-[12rem] flex justify-center items-center"
               color={"black"}
               loading={loading}
               // cssOverride={override}

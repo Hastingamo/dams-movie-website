@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect,useState } from 'react';
+import Footers from '../../component/Footer/Footers';
 function MoviesDetails() {
     const [addToList, setAddToList] = useState([]);
   
@@ -25,6 +26,7 @@ function MoviesDetails() {
         ))}
       </div>
     </div>
+    <Footers/>
   </div>
   )
 }

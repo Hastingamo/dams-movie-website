@@ -21,8 +21,8 @@ function Anime() {
       <div>
         {loading ? (
           <MoonLoader
-            className="mx-auto mt-40"
-            color={"black"}
+          className="ml-[7rem] mt-64 xm:ml-[12rem] flex justify-center items-center"
+          color={"black"}
             loading={loading}
             // cssOverride={override}
             size={150}

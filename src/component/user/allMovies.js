@@ -387,13 +387,13 @@ export const All = [
   },
   {
     id: 39,
-    movie_name: "behind Her Eyes",
+    movie_name: "The Night Agent",
     release: "23 March 2023",
     type: "Thriller",
     detail:
-      "Behind Her Eyes is a psychological thriller series based on Sarah Pinborough's novel, following a single mother, Louise, who begins an affair with her new boss, David, and forms an unlikely friendship with his wife, Adele, leading to a dark, suspenseful, and twisty story. ",
-    images: "public/images/behindHerEyes.jpeg",
-    duration: "1 season",
+     "The Night Agent is a Netflix action-thriller series based on Matthew Quirk's novel, following a low-level FBI agent who, while manning a White House emergency phone line, gets thrust into a dangerous conspiracy that reaches the highest levels of government. ",
+    duration: "2 season",
+    images: "images/agent.jpeg"
   },
   {
     id: 40,
