@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { you } from "../user/they";
+import { All } from "../user/allMovies";
 import { Link } from "react-router-dom";
 const SearchBar = () => {
-  const [store] = useState(you);
+  const [store] = useState(All);
   const [data, setData] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const getData = (e) => {

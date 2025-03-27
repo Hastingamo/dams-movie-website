@@ -29,7 +29,7 @@ function Animess() {
             // data-testid="loader"
           />
         ) : (
-            <div className=" h-screen overflow-x-hidden xp:overflow-x-hidden bg-[#808080] md:overflow-x-hidden xs:overflow-x-hidden xm:overflow-x-hidden md:bg-[#DADADA]">            <div>
+            <div className=" h-screen w-full overflow-x-hidden xp:overflow-x-hidden bg-[#808080] md:overflow-x-hidden xs:overflow-x-hidden xm:overflow-x-hidden md:bg-[#DADADA]">            <div>
               <div className="flex flex-row mt-4 ml-5 md:ml-10 gap-10 lg:gap-52 ">
                 <SearchDetials />
               </div>

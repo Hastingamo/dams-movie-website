@@ -11,16 +11,18 @@ import Rgister from "./pag/Register/Rgister";
 import Detail from "./pag/Detail/Detail";
 import Anime from "./pag/anime/Anime";
 import AddToList from "./pag/AddToList/AddToList";
+import Footers from "./component/Footer/Footers";
+import MoviesDetails from "./pag/MoviesDetail/MoviesDetails";
 
 function App() {
   return (
     <>
       <div className="xs:flex xs:flex-col md:flex-row md:flex h-screen">
         <Headers />
-        <div>
+        <div className="flex flex-col">
           <Routes>
             <Route path="" element={<Rgister />}></Route>
-            {/* <Route path="Home" element={<Home />}></Route> */}
+            <Route path="Home" element={<Home />}></Route>
             <Route path="Movies" element={<Movies />}></Route>
             <Route path="Series" element={<Series />}></Route>
             <Route path="Cartoon" element={<Cartoon />}></Route>

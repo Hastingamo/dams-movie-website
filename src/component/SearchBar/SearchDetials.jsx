@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { detial } from "../user/useDetail";
+// import { detial } from "../user/useDetail";
+import { All } from "../user/allMovies";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const SearchDetials = () => {
-  const [store] = useState(detial);
+  const [store] = useState(All);
   const [data, setData] = useState("");
   const [filteredData, setFilteredData] = useState([]);
 
