@@ -65,13 +65,13 @@ function Detail() {
           </p>
           <div className="flex flex-row gap-8 mt-4">
             <div className="flex flex-col">
-              <img
+              {/* <img
                 onClick={addToFavorites}
                 className="w-5 h-5 cursor-pointer items-center"
                 src="/images/like.png"
                 alt="Like"
               />{" "}
-              <p>add to favorites</p>
+              <p>add to favorites</p> */}
             </div>
             <div className="flex flex-col">
               <img
