@@ -12,12 +12,14 @@ import Rgister from "./pag/Register/Rgister";
 import Detail from "./pag/Detail/Detail";
 import Anime from "./pag/anime/Anime";
 import AddToList from "./pag/AddToList/AddToList";
+import Headerss from "./component/Header/Headerss";
 
 function App() {
   return (
     <>
       <div className=" flex h-screen">
-        <Headers />
+        <Headers className="hidden md:flex" />
+        <Headerss className="flex md:hidden"/>
         <div>
           <Routes>
             <Route path="" element={<Rgister />}></Route>
