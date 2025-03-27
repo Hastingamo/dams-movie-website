@@ -19,7 +19,6 @@ function App() {
     <>
       <div className=" flex h-screen">
         <Headers className="hidden md:flex" />
-        <Headerss className="flex md:hidden"/>
         <div>
           <Routes>
             <Route path="" element={<Rgister />}></Route>
