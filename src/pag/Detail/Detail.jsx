@@ -13,9 +13,9 @@ function Detail() {
   if (!movie) {
     return <div>item not found</div>;
   }
-  const [favorites, setFavorites] = useState(
-    JSON.parse(localStorage.getItem("favorites") || "[]")
-  );
+  // const [favorites, setFavorites] = useState(
+  //   JSON.parse(localStorage.getItem("favorites") || "[]")
+  // );
   const [addToListMovies, setAddToListMovies] = useState(
     JSON.parse(localStorage.getItem("addToList") || "[]")
   );
@@ -23,13 +23,13 @@ function Detail() {
     .sort(() => 0.5 - Math.random()) // Shuffle array
     .slice(0, 10);
 
-  const addToFavorites = () => {
-    if (!favorites.some((fav) => fav.id === movie.id)) {
-      const updatedFavorites = [...favorites, movie];
-      setFavorites(updatedFavorites);
-      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-    }
-  };
+  // const addToFavorites = () => {
+  //   if (!favorites.some((fav) => fav.id === movie.id)) {
+  //     const updatedFavorites = [...favorites, movie];
+  //     setFavorites(updatedFavorites);
+  //     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+  //   }
+  // };
   const addMovieToList = () => {
     if (!addToListMovies.some((dams) => dams.id === movie.id)) {
       const updatedList = [...addToListMovies, movie];
