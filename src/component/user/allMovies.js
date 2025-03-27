@@ -388,7 +388,7 @@ export const All = [
   {
     id: 39,
     movie_name: "behind Her Eyes",
-    release: "17 February 2021",
+    release: "23 March 2023",
     type: "Thriller",
     detail:
       "Behind Her Eyes is a psychological thriller series based on Sarah Pinborough's novel, following a single mother, Louise, who begins an affair with her new boss, David, and forms an unlikely friendship with his wife, Adele, leading to a dark, suspenseful, and twisty story. ",

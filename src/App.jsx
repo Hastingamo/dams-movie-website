@@ -16,22 +16,25 @@ import AddToList from "./pag/AddToList/AddToList";
 function App() {
   return (
     <>
-      <Headers />
-      <Routes>
-        <Route path="" element={<Rgister />}></Route>
-        <Route path="Home" element={<Home />}></Route>
-        <Route path="Movies" element={<Movies />}></Route>
-        <Route path="Series" element={<Series />}></Route>
-        <Route path="Cartoon" element={<Cartoon />}></Route>
-        <Route path="Login" element={<Login />}></Route>
-        <Route path="SignUp" element={<SignUp />}></Route>
-        <Route path="Profile" element={<Profile />}></Route>
-        <Route path="Detail/:id" element={<Detail/>}></Route>
-        <Route path="Anime" element={<Anime/>}></Route>
-        <Route path="AddToList" element={<AddToList/>}></Route>
-      </Routes>
-
-
+      <div className=" flex h-screen">
+        <Headers />
+        <div>
+          <Routes>
+            <Route path="" element={<Rgister />}></Route>
+            <Route path="Home" element={<Home />}></Route>
+            <Route path="Movies" element={<Movies />}></Route>
+            <Route path="Series" element={<Series />}></Route>
+            <Route path="Cartoon" element={<Cartoon />}></Route>
+            <Route path="Login" element={<Login />}></Route>
+            <Route path="SignUp" element={<SignUp />}></Route>
+            <Route path="Profile" element={<Profile />}></Route>
+            <Route path="Detail/:id" element={<Detail />}></Route>
+            <Route path="Anime" element={<Anime />}></Route>
+            <Route path="AddToList" element={<AddToList />}></Route>
+          </Routes>
+          <Footer/>
+        </div>
+      </div>
     </>
   );
 }

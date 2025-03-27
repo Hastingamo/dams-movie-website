@@ -29,13 +29,13 @@ function Anime() {
             // data-testid="loader"
           />
         ) : (
-          <div className="absolute left-0 top-10 h-screen overflow-x-hidden w-[24.5rem] xp:w-[42rem] bg-[#808080] md:overflow-x-hidden xs:w-[27rem] xs:overflow-x-hidden xm:overflow-x-hidden xm:w-[33.6rem]  md:h-ful md:w-[33.5rem] md:bg-[#DADADA] md:absolute md:top-0 md:left-[236px] lg:w-[49rem] xl:w-[70.6rem] xlg:w-[90rem]">
+          <div className=" h-screen overflow-x-hidden xp:overflow-x-hidden bg-[#808080] md:overflow-x-hidden xs:overflow-x-hidden xm:overflow-x-hidden md:bg-[#DADADA]">
             <div>
               <div className="flex flex-row mt-4 ml-5 md:ml-10 gap-10 lg:gap-52 ">
                 <Search />
               </div>
               <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xp:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 px-5">
-              {All.slice(0, 17).map((movies) => (
+                {All.slice(0, 17).map((movies) => (
                   <div
                     className="flex flex-row mt-4 ml-5 md:ml-4 gap-10 lg:gap-52 "
                     key={movies.id}
