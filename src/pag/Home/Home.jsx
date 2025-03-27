@@ -76,7 +76,7 @@ function Home() {
           <div className=" h-screen overflow-x-hidden xp:overflow-x-hidden bg-[#808080] md:overflow-x-hidden xs:overflow-x-hidden xm:overflow-x-hidden md:bg-[#DADADA]">
             <img
               src="images/Kingdom of the Planet of the Apes.png"
-              className="w-full sm:w-[99%] sm:h-[100%] md:w-full md:h-full"
+              className="w-full sm:w-[30rem] sm:h-[30rem] md:w-full md:h-full"
             />
             <h1 className="text-2xl text-white italic py-6 px-4">
               {" "}

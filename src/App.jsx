@@ -32,7 +32,6 @@ function App() {
             <Route path="Anime" element={<Anime />}></Route>
             <Route path="AddToList" element={<AddToList />}></Route>
           </Routes>
-          <Footer/>
         </div>
       </div>
     </>
