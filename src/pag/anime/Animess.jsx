@@ -46,6 +46,7 @@ function Animess() {
                           src={movies.images}
                           alt=""
                         />
+                        <p>{movies.movie_name}</p>
                         <div className="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md">
                           <img
                             className="w-6 h-6"

@@ -21,8 +21,8 @@ function Anime() {
       <div>
         {loading ? (
           <MoonLoader
-          className="ml-[7rem] mt-64 xm:ml-[12rem] flex justify-center items-center"
-          color={"black"}
+            className="ml-[7rem] mt-64 xm:ml-[12rem] flex justify-center items-center"
+            color={"black"}
             loading={loading}
             // cssOverride={override}
             size={150}
@@ -36,7 +36,7 @@ function Anime() {
                 <Search />
               </div>
               <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xp:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 px-5">
-              {All.slice(0, 17).map((movies) => (
+                {All.slice(0, 17).map((movies) => (
                   <div
                     className="flex flex-row mt-4 ml-5 md:ml-4 gap-10 lg:gap-52 "
                     key={movies.id}
@@ -48,6 +48,8 @@ function Anime() {
                           src={movies.images}
                           alt=""
                         />
+                        <p>{movies.movie_name}</p>
+
                         <div className="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md">
                           <img
                             className="w-6 h-6"
@@ -61,7 +63,7 @@ function Anime() {
                 ))}
               </div>
             </div>
-            <Footers/>
+            <Footers />
           </div>
         )}
       </div>

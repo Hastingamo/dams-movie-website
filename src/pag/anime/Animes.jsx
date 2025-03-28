@@ -18,8 +18,8 @@ function Animes() {
     <div>
       {loading ? (
         <MoonLoader
-        className="ml-[7rem] mt-64 xm:ml-[12rem] flex justify-center items-center"
-        color="black"
+          className="ml-[7rem] mt-64 xm:ml-[12rem] flex justify-center items-center"
+          color="black"
           loading={loading}
           size={150}
         />
@@ -39,6 +39,8 @@ function Animes() {
                       src={movie.images}
                       alt={movie.title || "Movie Image"}
                     />
+                    <p>{movie.movie_name}</p>
+
                     <div className="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md">
                       <img
                         className="w-6 h-6"
