@@ -19,6 +19,9 @@ function Detail() {
   const [addToListMovies, setAddToListMovies] = useState(
     JSON.parse(localStorage.getItem("addToList") || "[]")
   );
+  const [addToFavorite, setAddToFavorite] = useState(
+    JSON.parse(localStorage.getItem("addToFavorite") || "[]")
+  );
   const recommendedMovies = All.filter((item) => item.id !== Number(id)) // Exclude the current movie
     .sort(() => 0.5 - Math.random()) // Shuffle array
     .slice(0, 10);
@@ -37,6 +40,7 @@ function Detail() {
       localStorage.setItem("addToList", JSON.stringify(updatedList));
     }
   };
+  
   return (
     <div className=" h-screen overflow-x-hidden xp:overflow-x-hidden bg-[#808080] md:overflow-x-hidden xs:overflow-x-hidden xm:overflow-x-hidden md:bg-[#DADADA]">
       <div className="flex flex-row gap-4  xs:gap-6 xm:gap-8 xp:gap-10">

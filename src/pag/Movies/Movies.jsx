@@ -1,10 +1,9 @@
-import Anime from "../anime/Anime";
-
+import MoviesDetails from "../MoviesDetail/MoviesDetails";
 
 function Movies() {
   return(
       <>
-        <Anime/>
+        <MoviesDetails/>
       </>
   )
 }

@@ -35,7 +35,7 @@ function Animes() {
                 <div key={movie.id} className="flex flex-col items-center">
                   <Link to={`/Detail/${movie.id}`}>
                     <img
-                      className="w-[15rem] h-[15rem]"
+                      className="w-[15rem] h-[13rem]"
                       src={movie.images}
                       alt={movie.title || "Movie Image"}
                     />

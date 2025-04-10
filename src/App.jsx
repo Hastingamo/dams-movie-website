@@ -11,7 +11,6 @@ import Rgister from "./pag/Register/Rgister";
 import Detail from "./pag/Detail/Detail";
 import Anime from "./pag/anime/Anime";
 import AddToList from "./pag/AddToList/AddToList";
-import Footers from "./component/Footer/Footers";
 import MoviesDetails from "./pag/MoviesDetail/MoviesDetails";
 
 function App() {
@@ -32,7 +31,7 @@ function App() {
             <Route path="Detail/:id" element={<Detail />}></Route>
             <Route path="Anime" element={<Anime />}></Route>
             <Route path="AddToList" element={<AddToList />}></Route>
-            <Route path="AddToList" element={<MoviesDetails />}></Route>
+            <Route path="MoviesDetails" element={<MoviesDetails />}></Route>
           </Routes>
         </div>
       </div>
