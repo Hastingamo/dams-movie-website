@@ -9,10 +9,9 @@ function Footers() {
         <button onClick={() => navigate("/Home")}>Home</button>
         <button onClick={() => navigate("/Movies")}>Movies</button>
         <button onClick={() => navigate("/Series")}>Series</button>
-        <button onClick={() => navigate("/Cartoon")}>Cartoon</button>
+       
         <button onClick={() => navigate("/Profile")}>Profile</button>
         <button onClick={() => navigate("/AddToList")}>AddToList</button>
-        <button onClick={() => navigate("/MoviesDetails")}>MoviesDetails</button>
 
       </div>
       <div className="hidden md:flex md:flex-col">

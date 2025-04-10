@@ -10,9 +10,8 @@ function Headers() {
         <Link to="Home">Home</Link>
         <Link to="Movies">Movies</Link>
         <Link to="Series">Series</Link>
-        <Link to="Cartoon">Cartoon</Link>
         <Link to="AddToList">AddToList</Link>
-        <Link to="MoviesDetails">MoviesDetails</Link>
+        {/* <Link to="MoviesDetails">MoviesDetails</Link> */}
         <Link to="Profile">Profile</Link>
           <Link to="Login">Login</Link>
           <Link to="SignUp">SignUp</Link>
