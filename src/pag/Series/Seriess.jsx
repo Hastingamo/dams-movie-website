@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Searchs from "../../component/SearchBar/Searchs";
+import Search from "../../component/SearchModal/Search";
 
 function Seriess() {
   const [seriesList, setSeriesList] = useState([]);
@@ -21,7 +21,7 @@ function Seriess() {
   return (
     <>
       <div>
-        <Searchs/>
+        <Search/>
       </div>
       <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xp:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 px-5">
         {seriesList.map(
