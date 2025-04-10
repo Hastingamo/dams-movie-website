@@ -1,10 +1,10 @@
 import React from 'react'
-import Animes from '../anime/Animes'
+import them from '../MoviesDetail/them'
 
 function Series() {
   return (
     <div>
-      <Animes/>
+      <them/>
     </div>
   )
 }
