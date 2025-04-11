@@ -50,7 +50,7 @@ function Home() {
                     className="text-center"
                   >
                     <img
-                     className="w-full xm:h-[40rem]"
+                     className="w-fit xm:h-fit"
                       src={`/${rec.images}`}
                       alt={rec.movie_name}
                     />
