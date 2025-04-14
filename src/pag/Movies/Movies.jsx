@@ -1,10 +1,10 @@
-import Movie from "../MoviesDetail/movie";
+import Movie from "../MoviesDetail/Movie";
 
 function Movies() {
   return (
     <>
       <div className="h-screen overflow-x-hidden bg-[#808080] md:bg-[#DADADA]">
-        <Movie />
+        <Movie/>
       </div>
       
     </>

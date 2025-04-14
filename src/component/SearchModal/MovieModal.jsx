@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../../Searchbar"
 import { useState } from "react";
 function MovieModal() {
   const [isOpenSearch, setisOpenSearch] = useState();
