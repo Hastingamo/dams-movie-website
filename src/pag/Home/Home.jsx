@@ -5,7 +5,6 @@ import { All } from "../../component/user/allMovies";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import AddToList from "../AddToList/AddToList";
-import MoviesDetails from "../MoviesDetail/MoviesDetails";
 import Footers from "../../component/Footer/Footers";
 function Home() {
   const { id } = useParams();

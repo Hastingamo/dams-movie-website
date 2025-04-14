@@ -11,7 +11,6 @@ import Rgister from "./pag/Register/Rgister";
 import Detail from "./pag/Detail/Detail";
 import Anime from "./pag/anime/Anime";
 import AddToList from "./pag/AddToList/AddToList";
-import MoviesDetails from "./pag/MoviesDetail/MoviesDetails";
 
 function App() {
   return (
