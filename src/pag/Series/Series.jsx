@@ -4,7 +4,7 @@ import Seriess from './Seriess'
 
 function Series() {
   return (
-    <div>
+    <div className="h-screen overflow-x-hidden bg-[#808080] md:bg-[#DADADA]">
       <Seriess/>
     </div>
   )

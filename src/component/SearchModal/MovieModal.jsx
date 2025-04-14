@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import Searchs from "../SearchBar/Searchs";
-function Search() {
+import React from "react";
+import SearchBar from "../SearchBar/SearchBar";
+import { useState } from "react";
+function MovieModal() {
   const [isOpenSearch, setisOpenSearch] = useState();
   function onOpen() {
     setisOpenSearch(true);
@@ -13,7 +14,6 @@ function Search() {
       onClose();
     }
   }
-
   return (
     <>
       <h1 onClick={onOpen}>search</h1>
@@ -23,7 +23,7 @@ function Search() {
           className="fixed  inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex  justify-center z-50"
         >
           <div className="bg-white w-full max-w-md sm:max-w-lg md:max-w-xl rounded-xl shadow-lg p-6">
-            <Searchs onClick="onClose" />
+            <SearchBar onClick="onClose" />
           </div>
         </div>
       )}
@@ -31,4 +31,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default MovieModal;

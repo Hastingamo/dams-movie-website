@@ -21,7 +21,7 @@ function Home() {
   const recommendedMovies = All.filter((item) => item.id !== Number(id)) // Exclude the current movie
     .sort(() => 0.5 - Math.random()) // Shuffle array
     .slice(0, 10);
-    const recommendedMovie = All.filter((item) => item.id !== Number(id)) // Exclude the current movie
+  const recommendedMovie = All.filter((item) => item.id !== Number(id)) // Exclude the current movie
     .sort(() => 0.5 - Math.random()) // Shuffle array
     .slice(0, 1);
 
@@ -40,8 +40,8 @@ function Home() {
               // data-testid="loader"
             />
           ) : (
-            <div className=" h-screen overflow-x-hidden xp:overflow-x-hidden bg-[#808080] md:overflow-x-hidden xs:overflow-x-hidden xm:overflow-x-hidden md:bg-[#DADADA]">
-              <div >
+            <div className=" h-screen xp:overflow-x-hidden bg-[#808080] md:overflow-x-hidden xs:overflow-x-hidden xm:overflow-x-hidden md:bg-[#DADADA]">
+              <div>
                 {" "}
                 {recommendedMovie.map((rec) => (
                   <Link
@@ -50,11 +50,11 @@ function Home() {
                     className="text-center"
                   >
                     <img
-                     className="w-full xm:h-fit"
+                      className="w-full h-screen object-cover rounded-md"
                       src={`/${rec.images}`}
                       alt={rec.movie_name}
                     />
-                    <p className="text-sm">{rec.movie_name}</p>
+                    <p className="text-sm mt-2">{rec.movie_name}</p>
                   </Link>
                 ))}
               </div>
@@ -75,7 +75,7 @@ function Home() {
                   </Link>
                 ))}
               </div>
-              <Footers/>
+              <Footers />
             </div>
           )}
         </div>

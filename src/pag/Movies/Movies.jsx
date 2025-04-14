@@ -1,12 +1,13 @@
-import MoviesDetails from "../MoviesDetail/MoviesDetails";
+import Movie from "../MoviesDetail/movie";
 
 function Movies() {
-  return(
-      <>
-        <MoviesDetails/>
-      </>
-  )
+  return (
+    <>
+      <div className="h-screen overflow-x-hidden bg-[#808080] md:bg-[#DADADA]">
+        <Movie />
+      </div>
+    </>
+  );
 }
-  
 
 export default Movies;
