@@ -1,4 +1,5 @@
-import Movie from "../MoviesDetail/Movie";
+import Movie from "../MoviesDetail/movie";
+
 
 function Movies() {
   return (
