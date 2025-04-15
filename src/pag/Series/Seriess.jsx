@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Search from "../../component/SearchModal/Search";
 import { MoonLoader } from "react-spinners";
+import { Link } from "react-router-dom";
 
 function Seriess() {
   const [seriesList, setSeriesList] = useState([]);
@@ -39,12 +40,14 @@ function Seriess() {
             {seriesList.map(
               (movie) =>
                 movie.poster_path && (
-                  <img
+                  <Link to={`/movie/${movie.id}`} key={movie.id}>
+                     <img
                     key={movie.id}
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                     alt={movie.title || "Movie Poster"}
                     className="rounded-lg shadow-md"
                   />
+                  </Link>
                 )
             )}
           </div>

@@ -11,6 +11,7 @@ import Rgister from "./pag/Register/Rgister";
 import Detail from "./pag/Detail/Detail";
 import Anime from "./pag/anime/Anime";
 import AddToList from "./pag/AddToList/AddToList";
+import Moviessss from "./pag/Detail/Moviessss";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
             <Route path="Login" element={<Login />}></Route>
             <Route path="SignUp" element={<SignUp />}></Route>
             <Route path="Profile" element={<Profile />}></Route>
-            <Route path="Detail/:id" element={<Detail />}></Route>
+            <Route path="Detail/:id" element={<Detail/>}></Route>
+            
+        <Route path="/:category/:id" element={<Moviessss />} />
             <Route path="Anime" element={<Anime />}></Route>
             <Route path="AddToList" element={<AddToList />}></Route>
             {/* <Route path="MoviesDetails" element={<MoviesDetails />}></Route> */}

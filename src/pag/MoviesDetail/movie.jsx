@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { MoonLoader } from "react-spinners";
 import MovieModal from "../../component/SearchModal/movieModal";
+import { Link } from "react-router-dom";
 function Movie() {
   const [movieList, setMovieList] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -37,12 +38,15 @@ function Movie() {
             {movieList.map(
               (movie) =>
                 movie.poster_path && (
+                  <Link to={`/movie/${movie.id}`} key={movie.id}>
                   <img
                     key={movie.id}
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                     alt={movie.title || "Movie Poster"}
                     className="rounded-lg shadow-md"
                   />
+                  </Link>
+
                 )
             )}
           </div>
