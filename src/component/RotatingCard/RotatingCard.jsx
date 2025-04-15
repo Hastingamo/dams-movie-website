@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 // import { addToList } from "../context/AddToListContext";
-import { Data } from "../user/users";
-import { Link } from "react-router-dom";
+
 function RotatingCard({ Captainmarvel, love, info, share }) {
   const [isfliped, setIsFliped] = useState(false);
   function flipeds() {
