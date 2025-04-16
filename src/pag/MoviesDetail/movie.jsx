@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { MoonLoader } from "react-spinners";
-import MovieModal from "../../component/SearchModal/movieModal";
 import { Link } from "react-router-dom";
+import MovieModal from "../../component/SearchModal/MovieModal";
 function Movie() {
   const [movieList, setMovieList] = useState([]);
   const [loading, setLoading] = useState(false);
