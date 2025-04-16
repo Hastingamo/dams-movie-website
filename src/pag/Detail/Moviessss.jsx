@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import CastList from "../../component/castList/CastList";
-import VideoList from "../../component/VideoLists/videolist";
+import VideoList from "../../component/VideoLists/VideoList";
+// import VideoList from "../../component/VideoLists/videolist";
 function Moviessss() {
   const { category, id } = useParams();
   const [item, setItem] = useState(null);
@@ -37,7 +38,8 @@ function Moviessss() {
           ></div> */}
           <div className="w-full h-[500px] bg-cover bg-center">
             {/* <h2 className="text-2xl font-semibold mb-4">Videos</h2> */}
-            <VideoList id={item.id} />
+            {/* <VideoList id={item.id} /> */}
+            <VideoList id={item.id}/>
           </div>
 
           {/* Content */}
