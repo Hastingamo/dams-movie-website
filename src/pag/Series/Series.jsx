@@ -7,7 +7,6 @@ function Series() {
   return (
     <div className="h-screen overflow-x-hidden bg-[#808080] md:bg-[#DADADA]">
       <Seriess/>
-      <Footers/>
     </div>
   )
 }

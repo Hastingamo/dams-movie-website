@@ -52,7 +52,7 @@ function Seriess() {
                 )
             )}
           </div>
-          {/* <Footers/> */}
+          <Footers/>
         </div>
       )}
     </>

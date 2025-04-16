@@ -1,4 +1,3 @@
-import Footers from "../../component/Footer/Footers";
 import Movie from "../MoviesDetail/movie";
 
 
@@ -7,7 +6,7 @@ function Movies() {
     <>
       <div className="h-screen overflow-x-hidden bg-[#808080] md:bg-[#DADADA]">
         <Movie/>
-        <Footers/>
+        
       </div>
       
     </>

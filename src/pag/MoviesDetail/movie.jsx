@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { MoonLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import MovieModal from "../../component/SearchModal/MovieModal";
+import Footers from "../../component/Footer/Footers";
 function Movie() {
   const [movieList, setMovieList] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -32,23 +33,23 @@ function Movie() {
       ) : (
         <div>
           <div>
-            <MovieModal/>
+            <MovieModal />
           </div>
           <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xp:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 px-5">
             {movieList.map(
               (movie) =>
                 movie.poster_path && (
                   <Link to={`/movie/${movie.id}`} key={movie.id}>
-                  <img
-                    key={movie.id}
-                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                    alt={movie.title || "Movie Poster"}
-                    className="rounded-lg shadow-md"
-                  />
+                    <img
+                      key={movie.id}
+                      src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                      alt={movie.title || "Movie Poster"}
+                      className="rounded-lg shadow-md"
+                    />
                   </Link>
-
                 )
             )}
+            <Footers />
           </div>
         </div>
       )}
