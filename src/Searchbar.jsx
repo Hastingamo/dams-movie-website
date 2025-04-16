@@ -74,6 +74,10 @@ const SearchBar = () => {
                   <p className="mt-3 md:text-2xl">
                     Release Date: {movie.release_date || "N/A"}
                   </p>
+                  {/* <p className="mt-3 md:text-2xl">
+                    Release Date: {movie.movieType || "N/A"}
+                  </p> */}
+
                 </div>
               </div>
             </Link>

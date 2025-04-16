@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Search from "../../component/SearchModal/Search";
 import { MoonLoader } from "react-spinners";
 import { Link } from "react-router-dom";
+import Footers from "../../component/Footer/Footers";
 
 function Seriess() {
   const [seriesList, setSeriesList] = useState([]);
@@ -51,6 +52,7 @@ function Seriess() {
                 )
             )}
           </div>
+          {/* <Footers/> */}
         </div>
       )}
     </>
