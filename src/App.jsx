@@ -31,7 +31,7 @@ function App() {
             <Route path="Profile" element={<Profile />}></Route>
             <Route path="Detail/:id" element={<Detail />}></Route>
             <Route path="/:category/:id" element={<Moviessss />} />
-            {/* <Route path="*" element={<h1>404 Not Found</h1>} /> */}
+            <Route path="*" element={<h1>404 Not Found</h1>} />
             {/* <Route element={<ProtectedRoute />}>
               <Route path="/:category/:id" element={<Moviessss />} />
             </Route> */}
