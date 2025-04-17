@@ -52,8 +52,8 @@ function Searchs() {
       {limitedResults.length > 0 ? (
         limitedResults.map((item) => (
             <Link
-              to={`/movie/${item.id}`}
-              key={item.id}
+            to={`/tv/${item.id}`}
+            key={item.id}
               className="flex flex-row ml-4 gap-8"
             >
             <div className="flex flex-row gap-6">

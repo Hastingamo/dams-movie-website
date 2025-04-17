@@ -12,7 +12,8 @@ import Detail from "./pag/Detail/Detail";
 import Anime from "./pag/anime/Anime";
 import AddToList from "./pag/AddToList/AddToList";
 import Moviessss from "./pag/Detail/Moviessss";
-
+// import ProtectedRoute from "./pag/ProtectedRoute";
+// import PublicRoute from "./pag/PublicRoute";
 function App() {
   return (
     <>
@@ -20,17 +21,20 @@ function App() {
         <Headers />
         <div className="flex flex-col">
           <Routes>
-            <Route path="" element={<Rgister />}></Route>
-            <Route path="Home" element={<Home />}></Route>
+            <Route path="/Home" element={<Home />}></Route>
+            <Route path="Rgister" element={<Rgister />}></Route>
             <Route path="Movies" element={<Movies />}></Route>
             <Route path="Series" element={<Series />}></Route>
             <Route path="Cartoon" element={<Cartoon />}></Route>
-            <Route path="Login" element={<Login />}></Route>
+            <Route path="Login" element={<Login/>}></Route>
             <Route path="SignUp" element={<SignUp />}></Route>
             <Route path="Profile" element={<Profile />}></Route>
-            <Route path="Detail/:id" element={<Detail/>}></Route>
-            
-        <Route path="/:category/:id" element={<Moviessss />} />
+            <Route path="Detail/:id" element={<Detail />}></Route>
+            <Route path="/:category/:id" element={<Moviessss />} />
+            <Route path="*" element={<h1>404 Not Found</h1>} />
+            {/* <Route element={<ProtectedRoute />}>
+              <Route path="/:category/:id" element={<Moviessss />} />
+            </Route> */}
             <Route path="Anime" element={<Anime />}></Route>
             <Route path="AddToList" element={<AddToList />}></Route>
             {/* <Route path="MoviesDetails" element={<MoviesDetails />}></Route> */}
