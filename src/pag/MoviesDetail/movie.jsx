@@ -49,8 +49,9 @@ function Movie() {
                   </Link>
                 )
             )}
-            <Footers />
           </div>
+          <Footers />
+
         </div>
       )}
     </>
