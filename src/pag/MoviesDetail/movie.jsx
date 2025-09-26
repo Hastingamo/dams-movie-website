@@ -1,61 +1,210 @@
 import { useState, useEffect } from "react";
-import { MoonLoader } from "react-spinners";
 import { Link } from "react-router-dom";
-import MovieModal from "../../component/SearchModal/MovieModal";
-import Footers from "../../component/Footer/Footers";
+
+// Mock components since they're not available in this environment
+const MoonLoader = ({ color, loading, size }) => (
+  loading ? (
+    <div 
+      className="animate-spin rounded-full border-4 border-gray-200 border-t-gray-800 w-full h-screen"
+      style={{ 
+        width: `${size}px`, 
+        height: `${size}px`,
+        borderTopColor: color 
+      }}
+    />
+  ) : null
+);
+
+const MovieModal = () => <div />;
+const Footers = () => (
+  <footer className="mt-12 p-6 bg-gray-100 text-center text-gray-600">
+    <p>© 2024 Movie Database</p>
+  </footer>
+);
+
 function Movie() {
   const [movieList, setMovieList] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  const [error, setError] = useState(null);
 
-  const getMovie = () => {
-    fetch(
-      "https://api.themoviedb.org/3/discover/movie?api_key=cefba94a8355c33d34ceea35237af99b"
-    )
-      .then((res) => res.json())
-      .then((json) => setMovieList(json.results))
-      .catch((err) => console.error("Error fetching movies:", err));
+  const getMovies = async (pageNumber = 1, append = false) => {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      const response = await fetch(
+        `https://api.themoviedb.org/3/discover/movie?api_key=cefba94a8355c33d34ceea35237af99b&page=${pageNumber}`
+      );
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+
+      if (append) {
+        setMovieList((prev) => [...prev, ...data.results]);
+      } else {
+        setMovieList(data.results);
+      }      
+      if (pageNumber >= data.total_pages) {
+        setHasMore(false);
+      }
+    } catch (error) {
+      console.error("Error fetching movies:", error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
-    getMovie();
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    getMovies(1, false);
   }, []);
 
-  return (
-    <>
-      {loading ? (
-        <div className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-opacity-80 z-50 overflow-x-hidden">
-          <MoonLoader color={"black"} loading={loading} size={150} />
-        </div>
-      ) : (
-        <div>
-          <div>
-            <MovieModal />
-          </div>
-          <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xp:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 px-5">
-            {movieList.map(
-              (movie) =>
-                movie.poster_path && (
-                  <Link to={`/movie/${movie.id}`} key={movie.id}>
-                    <img
-                      key={movie.id}
-                      src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                      alt={movie.title || "Movie Poster"}
-                      className="rounded-lg shadow-md"
-                    />
-                  </Link>
-                )
-            )}
-          </div>
-          <Footers />
+  useEffect(() => {
+    if (page > 1) {
+      getMovies(page, true);
+    
+    }
+  }, [page, loading, hasMore]);
 
+  // useEffect(() => {
+  //   let timeoutId = null;
+    
+  //   const handleScroll = () => {
+  //     if (timeoutId) {
+  //       clearTimeout(timeoutId);
+  //     }
+      
+  //     timeoutId = setTimeout(() => {
+  //       const scrollTop = document.documentElement.scrollTop;
+  //       const windowHeight = window.innerHeight;
+  //       const documentHeight = document.documentElement.scrollHeight;
+        
+  //       // Check if user has scrolled near bottom (within 100px)
+  //       if (scrollTop + windowHeight + 100 >= documentHeight) {
+  //         if (!loading && hasMore) {
+  //           setPage((prev) => prev + 1);
+  //         }
+  //       }
+  //     }, 100); // Throttle to 100ms
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //     if (timeoutId) {
+  //       clearTimeout(timeoutId);
+  //     }
+  //   };
+  // }, [loading, hasMore]);
+
+
+
+
+  return (
+    <div className="min-h-screen">
+      <MovieModal />
+
+      {error && (
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mx-5 mt-4">
+          <p>Error loading movies: {error}</p>
+          <button 
+            onClick={() => {
+              setError(null);
+              setPage(1);
+              setHasMore(true);
+              getMovies(1, false);
+            }}
+            className="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+          >
+            Retry
+          </button>
         </div>
       )}
-    </>
+
+
+
+      <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 mt-6 px-5">
+        {movieList.map((movie) => (
+          <div
+            key={movie.id}
+            className="cursor-pointer transform transition-transform hover:scale-105"
+          >
+            {movie.poster_path ? (
+              <div>
+                <Link to={`/${'movie'}/${movie.id}`}>
+                              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt={movie.title || "Movie Poster"}
+                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                loading="lazy"
+                onError={(e) => {
+                  e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDMwMCA0NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xNTAgMjAwQzE2MS4wNDYgMjAwIDE3MCAyMDguOTU0IDE3MCAyMjBDMTcwIDIzMS4wNDYgMTYxLjA0NiAyNDAgMTUwIDI0MEMxMzguOTU0IDI0MCAxMzAgMjMxLjA0NiAxMzAgMjIwQzEzMCAyMDguOTU0IDEzOC45NTQgMjAwIDE1MCAyMDBaIiBmaWxsPSIjOUIxMDNEIi8+CjxwYXRoIGQ9Ik0yMTAgMjgwSDE0MEMxMzguODk1IDI4MCAxMzggMjgwLjg5NSAxMzggMjgyQzEzOCAyODMuMTA1IDEzOC44OTUgMjg0IDE0MCAyODRIMjEwQzIxMS4xMDUgMjg0IDIxMiAyODMuMTA1IDIxMiAyODJDMjEyIDI4MC44OTUgMjExLjEwNSAyODAgMjEwIDI4MFoiIGZpbGw9IiM5QjEwM0QiLz4KPC9zdmc+';
+                }}
+              />  
+
+                </Link>
+
+                                 {movie.vote_average > 0 && (
+                    <span className="text-xs text-yellow-600 flex items-center">
+                      ⭐ {movie.vote_average.toFixed(1)}
+                    </span>
+                  )}
+              </div>
+                  
+
+            ) : (
+              // Placeholder for movies without posters
+              <div className="w-full aspect-[3/4.5] bg-gray-200 rounded-lg flex items-center justify-center">
+                <div className="text-gray-400 text-center p-4">
+                  <div className="text-2xl mb-2">🎬</div>
+                  <div className="text-xs">No Image</div>
+                </div>
+              </div>
+            )}
+            <div className="mt-2 text-sm font-medium text-gray-800 truncate">
+              {movie.title}
+            </div>
+            <div className="text-xs text-gray-500">
+              {movie.release_date ? new Date(movie.release_date).getFullYear() : 'N/A'}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {loading && (
+        <div className="flex justify-center my-8">
+          <MoonLoader color="#374151" loading={loading} size={40} />
+        </div>
+      )}
+
+      {!hasMore && !loading && movieList.length > 0 && (
+        <div className="text-center my-8 text-gray-500 text-lg">
+          you have reached the end of the list.
+        </div>
+      )}
+
+     
+      {!loading && hasMore && movieList.length > 0 && (
+        <div className="text-center my-8">
+          <button 
+            onClick={() => setPage(prev => prev + 1)}
+            className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+          >
+            more
+          </button>
+        </div>
+      )}
+
+
+      <Footers />
+    </div>
   );
 }
 
 export default Movie;
+

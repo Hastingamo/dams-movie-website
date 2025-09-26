@@ -28,7 +28,7 @@ function Moviessss() {
   return (
     <>
       {item && (
-        <div className="text-white bg-gray-900 min-h-screen overflow-x-hidden">
+        <div className="text-white bg-gray-900 min-h-screen overflow-x-hidden flex flex-col">
           {/* Banner */}
           {/* <div
             className="w-full h-[500px] bg-cover bg-center"
