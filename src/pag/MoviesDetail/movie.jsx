@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Footers from "../../component/Footer/Footers";
 
-// Mock components since they're not available in this environment
+// Mock loader component
 const MoonLoader = ({ color, loading, size }) => (
   loading ? (
     <div 
-      className="animate-spin rounded-full border-4 border-gray-200 border-t-gray-800 w-full h-screen"
+      className="animate-spin rounded-full border-4 border-gray-200 border-t-gray-800"
       style={{ 
         width: `${size}px`, 
         height: `${size}px`,
@@ -15,18 +16,11 @@ const MoonLoader = ({ color, loading, size }) => (
   ) : null
 );
 
-const MovieModal = () => <div />;
-const Footers = () => (
-  <footer className="mt-12 p-6 bg-gray-100 text-center text-gray-600">
-    <p>© 2024 Movie Database</p>
-  </footer>
-);
-
 function Movie() {
   const [movieList, setMovieList] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
   const [error, setError] = useState(null);
 
   const getMovies = async (pageNumber = 1, append = false) => {
@@ -48,10 +42,12 @@ function Movie() {
         setMovieList((prev) => [...prev, ...data.results]);
       } else {
         setMovieList(data.results);
-      }      
-      if (pageNumber >= data.total_pages) {
-        setHasMore(false);
+        window.scrollTo(0, 0);
       }
+      
+      setTotalPages(data.total_pages);
+      setCurrentPage(pageNumber);
+      
     } catch (error) {
       console.error("Error fetching movies:", error);
       setError(error.message);
@@ -64,59 +60,43 @@ function Movie() {
     getMovies(1, false);
   }, []);
 
-  useEffect(() => {
-    if (page > 1) {
-      getMovies(page, true);
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxVisiblePages = 5;
     
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+    
+    if (endPage - startPage + 1 < maxVisiblePages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
     }
-  }, [page, loading, hasMore]);
-
-  // useEffect(() => {
-  //   let timeoutId = null;
     
-  //   const handleScroll = () => {
-  //     if (timeoutId) {
-  //       clearTimeout(timeoutId);
-  //     }
-      
-  //     timeoutId = setTimeout(() => {
-  //       const scrollTop = document.documentElement.scrollTop;
-  //       const windowHeight = window.innerHeight;
-  //       const documentHeight = document.documentElement.scrollHeight;
-        
-  //       // Check if user has scrolled near bottom (within 100px)
-  //       if (scrollTop + windowHeight + 100 >= documentHeight) {
-  //         if (!loading && hasMore) {
-  //           setPage((prev) => prev + 1);
-  //         }
-  //       }
-  //     }, 100); // Throttle to 100ms
-  //   };
+    for (let i = startPage; i <= endPage; i++) {
+      pages.push(i);
+    }
+    
+    return pages;
+  };
 
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //     if (timeoutId) {
-  //       clearTimeout(timeoutId);
-  //     }
-  //   };
-  // }, [loading, hasMore]);
-
-
+  const handlePageClick = (pageNumber) => {
+    if (pageNumber !== currentPage && !loading) {
+      getMovies(pageNumber, false);
+setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 100);
+    }
+  };
 
 
   return (
     <div className="min-h-screen">
-      <MovieModal />
-
       {error && (
         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mx-5 mt-4">
           <p>Error loading movies: {error}</p>
           <button 
             onClick={() => {
               setError(null);
-              setPage(1);
-              setHasMore(true);
+              setCurrentPage(1);
               getMovies(1, false);
             }}
             className="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
@@ -126,8 +106,6 @@ function Movie() {
         </div>
       )}
 
-
-
       <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 mt-6 px-5">
         {movieList.map((movie) => (
           <div
@@ -136,27 +114,24 @@ function Movie() {
           >
             {movie.poster_path ? (
               <div>
-                <Link to={`/${'movie'}/${movie.id}`}>
-                              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt={movie.title || "Movie Poster"}
-                className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                loading="lazy"
-                onError={(e) => {
-                  e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDMwMCA0NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xNTAgMjAwQzE2MS4wNDYgMjAwIDE3MCAyMDguOTU0IDE3MCAyMjBDMTcwIDIzMS4wNDYgMTYxLjA0NiAyNDAgMTUwIDI0MEMxMzguOTU0IDI0MCAxMzAgMjMxLjA0NiAxMzAgMjIwQzEzMCAyMDguOTU0IDEzOC45NTQgMjAwIDE1MCAyMDBaIiBmaWxsPSIjOUIxMDNEIi8+CjxwYXRoIGQ9Ik0yMTAgMjgwSDE0MEMxMzguODk1IDI4MCAxMzggMjgwLjg5NSAxMzggMjgyQzEzOCAyODMuMTA1IDEzOC44OTUgMjg0IDE0MCAyODRIMjEwQzIxMS4xMDUgMjg0IDIxMiAyODMuMTA1IDIxMiAyODJDMjEyIDI4MC44OTUgMjExLjEwNSAyODAgMjEwIDI4MFoiIGZpbGw9IiM5QjEwM0QiLz4KPC9zdmc+';
-                }}
-              />  
-
+                <Link to={`/movie/${movie.id}`}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                    alt={movie.title || "Movie Poster"}
+                    className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDMwMCA0NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xNTAgMjAwQzE2MS4wNDYgMjAwIDE3MCAyMDguOTU0IDE3MCAyMjBDMTcwIDIzMS4wNDYgMTYxLjA0NiAyNDAgMTUwIDI0MEMxMzguOTU0IDI0MCAxMzAgMjMxLjA0NiAxMzAgMjIwQzEzMCAyMDguOTU0IDEzOC45NTQgMjAwIDE1MCAyMDBaIiBmaWxsPSIjOUIxMDNEIi8+CjxwYXRoIGQ9Ik0yMTAgMjgwSDE0MEMxMzguODk1IDI4MCAxMzggMjgwLjg5NSAxMzggMjgyQzEzOCAyODMuMTA1IDEzOC44OTUgMjg0IDE0MCAyODRIMjEwQzIxMS4xMDUgMjg0IDIxMiAyODMuMTA1IDIxMiAyODJDMjEyIDI4MC44OTUgMjExLjEwNSAyODAgMjEwIDI4MFoiIGZpbGw9IiM5QjEwM0QiLz4KPC9zdmc+';
+                    }}
+                  />  
                 </Link>
 
-                                 {movie.vote_average > 0 && (
-                    <span className="text-xs text-yellow-600 flex items-center">
-                      ⭐ {movie.vote_average.toFixed(1)}
-                    </span>
-                  )}
+                {movie.vote_average > 0 && (
+                  <span className="text-xs text-yellow-600 flex items-center mt-1">
+                    ⭐ {movie.vote_average.toFixed(1)}
+                  </span>
+                )}
               </div>
-                  
-
             ) : (
               // Placeholder for movies without posters
               <div className="w-full aspect-[3/4.5] bg-gray-200 rounded-lg flex items-center justify-center">
@@ -177,29 +152,60 @@ function Movie() {
       </div>
 
       {loading && (
-        <div className="flex justify-center my-8">
+        <div className="flex justify-center items-center mt-8 py-8">
           <MoonLoader color="#374151" loading={loading} size={40} />
         </div>
       )}
 
-      {!hasMore && !loading && movieList.length > 0 && (
-        <div className="text-center my-8 text-gray-500 text-lg">
-          you have reached the end of the list.
+      {/* Pagination Controls */}
+      {!loading && totalPages > 0 && (
+        <div className="flex flex-col items-center my-8 space-y-4">
+          <div className="flex items-center space-x-2">
+            <button 
+              onClick={() => handlePageClick(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`px-3 py-1 rounded-lg ${
+                currentPage === 1 
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              }`}
+            >
+              ←
+            </button>
+
+            {getPageNumbers().map((pageNum) => (
+              <button 
+                key={pageNum}
+                onClick={() => handlePageClick(pageNum)}
+                className={`px-3 py-1 rounded-lg ${
+                  pageNum === currentPage 
+                    ? 'bg-blue-600 text-white' 
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                {pageNum}
+              </button>
+            ))}
+
+            <button 
+              onClick={() => handlePageClick(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`px-3 py-1 rounded-lg ${
+                currentPage === totalPages 
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              }`}
+            >
+              →
+            </button>
+          </div>
+
+          <div className="text-sm text-gray-500">
+            Page {currentPage} of {totalPages}
+          </div>
+
         </div>
       )}
-
-     
-      {!loading && hasMore && movieList.length > 0 && (
-        <div className="text-center my-8">
-          <button 
-            onClick={() => setPage(prev => prev + 1)}
-            className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors"
-          >
-            more
-          </button>
-        </div>
-      )}
-
 
       <Footers />
     </div>
@@ -207,4 +213,3 @@ function Movie() {
 }
 
 export default Movie;
-

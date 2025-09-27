@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Search from "../../component/SearchModal/Search";
 import { MoonLoader } from "react-spinners";
 import { Link } from "react-router-dom";
-// import Footers from "../../component/Footer/Footers";
+import Footers from "../../component/Footer/Footers";
 // import Image from "../../component/Image"; // Make sure this path is correct or adjust as needed
 
 function Seriess() {
@@ -58,7 +58,7 @@ function Seriess() {
   return (
     <>
       {loading ? (
-        <div className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-opacity-80 z-50 overflow-x-hidden">
+        <div className="w-full h-screen flex justify-center items-center">
           <MoonLoader color={"black"} loading={loading} size={150} />
         </div>
       ) : (
@@ -71,7 +71,7 @@ function Seriess() {
               <div key={series.id} className="flex flex-col">
                 {series.poster_path ? (
                   <div>
-                    <Link to={`/Detail/${series.id}`}>
+                      <Link to={`/${'series'}/${series.id}`}>
                       <img
                         src={`https://image.tmdb.org/t/p/w500${series.poster_path}`}
                         alt={series.title || series.name}
@@ -101,13 +101,14 @@ function Seriess() {
                 </div>
               </div>
             ))}
+          </div>
             {!hasMore && !loading && seriesList.length > 0 && (
               <div className="flex justify-center my-8">
                 you have reached the end of the list.
               </div>
             )}
 
-          {!loading && hasMore && (
+          {!loading && hasMore && seriesList.length > 0 &&(
             <div className="text-center my-8">
               <button
                 onClick={() => setPage((prev) => prev + 1)}
@@ -117,7 +118,7 @@ function Seriess() {
               </button>
             </div>
           )}
-          </div>
+          <Footers />
         </div>
       )}
     </>

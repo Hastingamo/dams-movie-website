@@ -45,7 +45,7 @@ function Home() {
           {featuredMovie && (
             <Link   to={`/movie/${movies.id}`}                 className="block">
               <img
-                className="w-full h-[20rem] object-cover rounded-md"
+                className="w-full h-[20rem] rounded-md"
                 src={`https://image.tmdb.org/t/p/original${featuredMovie.backdrop_path}`}
                 alt={featuredMovie.title}
               />

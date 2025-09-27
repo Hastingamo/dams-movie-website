@@ -31,7 +31,8 @@ function App() {
             <Route path="Login" element={<Login/>}></Route>
             <Route path="SignUp" element={<SignUp />}></Route>
             <Route path="Profile" element={<Profile />}></Route>
-            <Route path="Detail/:id" element={<Detail />}></Route>
+            <Route path="/Detail/:id" element={<Detail />}></Route>    
+                    
             <Route path="/:category/:id" element={<Moviessss />} />
             <Route path="*" element={<h1>404 Not Found</h1>} />
             {/* <Route element={<ProtectedRoute />}>
