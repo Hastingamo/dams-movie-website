@@ -153,7 +153,7 @@ function Seriess() {
       setLoading(true);
       setError(null);
       const response = await fetch(
-        `https://api.themoviedb.org/3/discover/tv ?api_key=cefba94a8355c33d34ceea35237af99b&page=${pageNumber}`
+        `https://api.themoviedb.org/3/discover/tv?api_key=cefba94a8355c33d34ceea35237af99b&page=${pageNumber}`
       );
 
       if (!response.ok) {
@@ -260,12 +260,14 @@ function Seriess() {
                 </div>
               </div>
                 )}
-                            <div className="mt-2 text-sm font-medium text-gray-800 truncate">
-              {series.title}
-            </div>
-            <div className="text-xs text-gray-500">
-              {series.release_date ? new Date(series.release_date).getFullYear() : 'N/A'}
-            </div>
+                <div className="mt-2 text-sm font-medium text-gray-800 truncate">
+                  {series.title || series.name}
+                </div>
+                <div className="text-xs text-gray-500">
+                  {series.first_air_date
+                    ? new Date(series.first_air_date).getFullYear()
+                    : "N/A"}
+                </div>
           </div>
         ))}
 
