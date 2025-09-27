@@ -83,6 +83,8 @@ function Movie() {
       getMovies(pageNumber, false);
 setTimeout(() => {
         window.scrollTo(0, 0);
+
+        
       }, 100);
     }
   };
