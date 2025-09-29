@@ -6,7 +6,7 @@ import Footers from "../../component/Footer/Footers";
 const MoonLoader = ({ color, loading, size }) => (
   loading ? (
     <div 
-      className="animate-spin rounded-full border-4 border-gray-200 border-t-gray-800"
+      className="animate-spin rounded-full border-4 border-gray-200 border-t-gray-800 w-full h-screen flex justify-center items-center"
       style={{ 
         width: `${size}px`, 
         height: `${size}px`,
@@ -157,14 +157,14 @@ setTimeout(() => {
       </div>
 
       {loading && (
-        <div className="flex justify-center items-center mt-8 py-8">
+        <div className="flex justify-center items-center mt-8 py-8 w-full h-screen">
           <MoonLoader color="#374151" loading={loading} size={40} />
         </div>
       )}
 
       {/* Pagination Controls */}
       {!loading && totalPages > 0 && (
-        <div className="flex flex-col items-center my-8 space-y-4 w-full h-screen">
+        <div className="flex flex-col items-center my-8 space-y-4 w-full h-fit">
           <div className="flex items-center space-x-2">
             <button 
               onClick={() => handlePageClick(currentPage - 1)}
@@ -207,8 +207,9 @@ setTimeout(() => {
 
           <div className="text-sm text-gray-500">
             Page {currentPage} of {totalPages}
+                  <Footers />
+
           </div>
-      <Footers />
 
         </div>
       )}
