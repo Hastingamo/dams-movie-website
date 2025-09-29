@@ -116,11 +116,10 @@ function Seriess() {
                     }}
                   />  
                 </Link>
-                                {series.vote_average > 0 && (
-                  <span className="text-xs text-yellow-600 flex items-center mt-1">
-                    ⭐ {series.vote_average.toFixed(1)}
-                  </span>
-                )}
+
+                              <div className="mt-2 text-sm font-medium text-gray-800 truncate">
+                  {series.title || series.name}
+                </div>
                   </div>
                 ):(
                                 // Placeholder for movies without posters
@@ -131,13 +130,16 @@ function Seriess() {
                 </div>
               </div>
                 )}
-                <div className="mt-2 text-sm font-medium text-gray-800 truncate">
-                  {series.title || series.name}
-                </div>
-                <div className="text-xs text-gray-500">
+
+                <div className="text-xs text-gray-500 grid grid-cols-2">
                   {series.first_air_date
                     ? new Date(series.first_air_date).getFullYear()
                     : "N/A"}
+                                                    {series.vote_average > 0 && (
+                  <span className="text-xs text-yellow-600 flex items-center">
+                    ⭐ {series.vote_average.toFixed(1)}
+                  </span>
+                  )}
                 </div>
           </div>
         ))}

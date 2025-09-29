@@ -40,9 +40,7 @@ function Moviessss() {
             <VideoList id={item.id} />
           </div>
 
-          {/* Content */}
-          <div className="container mx-auto px-4 py-10 flex flex-col md:flex-row gap-8">
-            {/* Poster */}
+          <div className="container mx-auto px-4 py-10 flex flex-col md:flex-row gap-8 xl:mt-[20rem]">
             <div className="md:w-1/3">
               <img
                 src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
@@ -51,7 +49,6 @@ function Moviessss() {
               />
             </div>
 
-            {/* Info */}
             <div className="md:w-2/3">
               <h1 className="text-4xl font-bold mb-4">
                 {item.title || item.name}

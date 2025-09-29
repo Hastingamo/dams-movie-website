@@ -55,7 +55,7 @@ function Home() {
             </Link>
           )}
 
-          <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-6 px-5">
+          {/* <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-6 px-5">
             {recommendedMovies.map((movie) => (
               <Link
                 key={movie.id}
@@ -69,7 +69,7 @@ function Home() {
                 <p className="text-lg mt-2 font-medium">{movie.title}</p>
               </Link>
             ))}
-          </div>
+          </div> */}
 
           <Footers />
         </>
