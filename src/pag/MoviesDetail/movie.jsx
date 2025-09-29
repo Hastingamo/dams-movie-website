@@ -161,7 +161,7 @@ setTimeout(() => {
 
       {/* Pagination Controls */}
       {!loading && totalPages > 0 && (
-        <div className="flex flex-col items-center my-8 space-y-4">
+        <div className="flex flex-col items-center my-8 space-y-4 w-full h-screen">
           <div className="flex items-center space-x-2">
             <button 
               onClick={() => handlePageClick(currentPage - 1)}
@@ -205,11 +205,11 @@ setTimeout(() => {
           <div className="text-sm text-gray-500">
             Page {currentPage} of {totalPages}
           </div>
+      <Footers />
 
         </div>
       )}
 
-      <Footers />
     </div>
   );
 }
