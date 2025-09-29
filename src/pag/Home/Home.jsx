@@ -29,10 +29,10 @@ function Home() {
     movies.length > 0 ? movies[Math.floor(Math.random() * movies.length)] : null;
 
   // Select 10 random recommended movies (excluding the featured one)
-  const recommendedMovies = movies
-    .filter((movie) => movie.id !== featuredMovie?.id)
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 10);
+  // const recommendedMovies = movies
+  //   .filter((movie) => movie.id !== featuredMovie?.id)
+  //   .sort(() => 0.5 - Math.random())
+  //   .slice(0, 10);
 
   return (
     <div className="min-h-screen bg-[#DADADA] overflow-x-hidden">
@@ -70,6 +70,16 @@ function Home() {
               </Link>
             ))}
           </div> */}
+
+          {/* top 10 movies */}
+          <div className="px-5 mt-10">
+            <h2 className="text-2xl font-semibold mb-4">Trending Movies</h2>
+            <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                {
+
+                }
+              </div>
+              </div>
 
           <Footers />
         </>
