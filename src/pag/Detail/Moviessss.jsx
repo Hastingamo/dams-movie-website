@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react"
 import { useParams } from "react-router";
 import CastList from "../../component/castList/CastList";
-import VideoList from "../../component/VideoLists/Videolist";
+import VideoList from "../../component/VideoLists/VideoList"
 function Moviessss() {
   const { category, id } = useParams();
   const [item, setItem] = useState(null);
