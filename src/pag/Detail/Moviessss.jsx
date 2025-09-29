@@ -54,7 +54,6 @@ function Moviessss() {
                 {item.title || item.name}
               </h1>
 
-              {/* Genres */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {item.genres?.slice(0, 5).map((genre) => (
                   <span
@@ -66,10 +65,8 @@ function Moviessss() {
                 ))}
               </div>
 
-              {/* Overview */}
               <p className="text-gray-300 mb-6">{item.overview}</p>
 
-              {/* Casts */}
               <div className="mb-10">
                 <h2 className="text-2xl font-semibold mb-4">Casts</h2>
                 <CastList id={item.id} />
