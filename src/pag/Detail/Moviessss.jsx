@@ -24,6 +24,7 @@ function Moviessss() {
     getDetail();
   }, [category, id]);
 
+  
   return (
     <>
       {item && (
