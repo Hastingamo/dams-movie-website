@@ -157,7 +157,9 @@ setTimeout(() => {
       </div>
 
       {loading && (
-        <div className="flex justify-center items-center mt-8 py-8 w-full h-screen">
+        // <div className="flex justify-center items-center mt-8 py-8 w-full h-screen">
+          <div className="fixed inset-0 flex justify-center items-center z-50 overflow-hidden">
+
           <MoonLoader color="#374151" loading={loading} size={40} />
         </div>
       )}
