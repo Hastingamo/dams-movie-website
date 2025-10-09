@@ -152,7 +152,7 @@ function Seriess() {
       </div>
 
       {loading && (
-        <div className="flex justify-center items-center mt-8 py-8">
+  <div className="fixed inset-0 flex justify-center items-center z-50 bg-white/70 backdrop-blur-sm">
           <MoonLoader color="#374151" loading={loading} size={40} />
         </div>
       )}

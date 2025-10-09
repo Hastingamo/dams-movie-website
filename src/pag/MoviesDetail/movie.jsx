@@ -3,18 +3,17 @@ import { Link } from "react-router-dom";
 import Footers from "../../component/Footer/Footers";
 import MovieModal from "../../component/SearchModal/MovieModal";
 // Mock loader component
-const MoonLoader = ({ color, loading, size }) => (
-  loading ? (
-    <div 
-      className="animate-spin rounded-full border-4 border-gray-200 border-t-gray-800 w-full h-screen flex justify-center items-center"
-      style={{ 
-        width: `${size}px`, 
+const MoonLoader = ({ color = "#374151", loading = true, size = 40 }) => (
+  !loading ? null : (
+    <div
+      className="animate-spin rounded-full border-4 border-gray-200 border-t-gray-800"
+      style={{
+        width: `${size}px`,
         height: `${size}px`,
-        borderTopColor: color 
+        borderTopColor: color,
       }}
-    />
-  ) : null
-);
+    ></div>
+  )
 
 function Movie() {
   const [movieList, setMovieList] = useState([]);
@@ -161,7 +160,7 @@ setTimeout(() => {
 
       {loading && (
         // <div className="flex justify-center items-center mt-8 py-8 w-full h-screen">
-          <div className="fixed inset-0 flex justify-center items-center z-50 overflow-hidden">
+  <div className="fixed inset-0 flex justify-center items-center z-50 bg-white/70 backdrop-blur-sm">
 
           <MoonLoader color="#374151" loading={loading} size={40} />
         </div>
