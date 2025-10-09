@@ -213,10 +213,13 @@ setTimeout(() => {
 
           <div className="text-sm text-gray-500">
             Page {currentPage} of {totalPages}
-                  <Footers />
-
           </div>
+                            <Footers />
 
+          {/* <div className="text-sm text-gray-500">
+            Page {page} of {totalPages}
+          </div>
+          <Footers /> */}
         </div>
       )}
 

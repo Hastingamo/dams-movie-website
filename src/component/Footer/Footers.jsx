@@ -21,7 +21,7 @@ function Footers() {
         <h1 className="ml-32 text-2xl mt-3 md:ml-24 xp:ml-32 xp:text-3xl lg:mt-4 lg:ml-60 xl:ml-[22rem]">
           Contact us
         </h1>
-        <div className="flex ml-32 gap-4 fixed-bottom text-2xl mt-3 md:ml-24 xp:ml-32 xp:text-3xl lg:mt-4 lg:ml-60 xl:ml-[22rem]">
+        <div className="flex ml-32 gap-4 fixed text-2xl mt-3 md:ml-24 xp:ml-32 xp:text-3xl lg:mt-4 lg:ml-60 xl:ml-[22rem] justify-center items-center">
           <img className="w-5 h-5" src="images/facebook.png" alt="" />
           <img className="w-5 h-5" src="images/instagram.png" alt="" />
           <img className="w-5 h-5 " src="images/tiktok.png" alt="" />
