@@ -31,7 +31,7 @@ const SearchBar = () => {
   // const resultStyle = limitedData.length > 0 ? {} : { display: "none" };
 
   return (
-    <div>
+    <div className="overflow-y-scroll">
       <input
         placeholder="search"
         onChange={getData}
@@ -59,7 +59,7 @@ const SearchBar = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <p className="mt-5 text-2xl md:text-3xl">
+                <p className="mt-5 text-2xl md:text-2xl">
                   {curValue.movie_name || "No name available"}
                 </p>
                 <p className="mt-3 md:text-2xl">

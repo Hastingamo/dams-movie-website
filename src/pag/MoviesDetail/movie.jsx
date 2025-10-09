@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footers from "../../component/Footer/Footers";
-
+import MovieModal from "../../component/SearchModal/MovieModal";
 // Mock loader component
 const MoonLoader = ({ color, loading, size }) => (
   loading ? (
@@ -107,7 +107,10 @@ setTimeout(() => {
           </button>
         </div>
       )}
-
+      <div className="flex  flex-row  ml-5 mt-3">
+              <h1 className="text-3xl font-sans">Movies </h1>
+              <MovieModal/>
+      </div>
       <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 mt-6 px-5">
         {movieList.map((movie) => (
           <div

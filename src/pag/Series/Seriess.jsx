@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footers from "../../component/Footer/Footers";
+import Search from "../../component/SearchModal/Search";
 const MoonLoader = ({ color, loading, size }) =>
   loading ? (
     <div
@@ -84,7 +85,7 @@ function Seriess() {
       {error && (
         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mx-5 mt-4">
           <p>Error loading movies: {error}</p>
-          <button 
+          <button
             onClick={() => {
               setError(null);
               setPage(1);
@@ -96,99 +97,102 @@ function Seriess() {
           </button>
         </div>
       )}
+      <div className="flex  flex-row  ml-5 mt-3">
+        <h1 className="text-3xl font-sans">Series </h1>
+        <Search />
+      </div>
 
-            <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 mt-6 px-5">
-              {seriesList.map((series) =>(
-                <div
-                key={series.id}
-            className="cursor-pointer transform transition-transform hover:scale-105">
-              {
-                series.poster_path ? (
-                  <div>
-                         <Link to={`/tv/${series.id}`}>
+      <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 mt-6 px-5">
+        {seriesList.map((series) => (
+          <div
+            key={series.id}
+            className="cursor-pointer transform transition-transform hover:scale-105"
+          >
+            {series.poster_path ? (
+              <div>
+                <Link to={`/tv/${series.id}`}>
                   <img
-                        src={`https://image.tmdb.org/t/p/w500${series.poster_path}`}
+                    src={`https://image.tmdb.org/t/p/w500${series.poster_path}`}
                     alt={series.title || "Movie Poster"}
                     className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
                     loading="lazy"
                     onError={(e) => {
-                      e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDMwMCA0NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xNTAgMjAwQzE2MS4wNDYgMjAwIDE3MCAyMDguOTU0IDE3MCAyMjBDMTcwIDIzMS4wNDYgMTYxLjA0NiAyNDAgMTUwIDI0MEMxMzguOTU0IDI0MCAxMzAgMjMxLjA0NiAxMzAgMjIwQzEzMCAyMDguOTU0IDEzOC45NTQgMjAwIDE1MCAyMDBaIiBmaWxsPSIjOUIxMDNEIi8+CjxwYXRoIGQ9Ik0yMTAgMjgwSDE0MEMxMzguODk1IDI4MCAxMzggMjgwLjg5NSAxMzggMjgyQzEzOCAyODMuMTA1IDEzOC44OTUgMjg0IDE0MCAyODRIMjEwQzIxMS4xMDUgMjg0IDIxMiAyODMuMTA1IDIxMiAyODJDMjEyIDI4MC44OTUgMjExLjEwNSAyODAgMjEwIDI4MFoiIGZpbGw9IiM5QjEwM0QiLz4KPC9zdmc+';
+                      e.target.src =
+                        "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDMwMCA0NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iNDUwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xNTAgMjAwQzE2MS4wNDYgMjAwIDE3MCAyMDguOTU0IDE3MCAyMjBDMTcwIDIzMS4wNDYgMTYxLjA0NiAyNDAgMTUwIDI0MEMxMzguOTU0IDI0MCAxMzAgMjMxLjA0NiAxMzAgMjIwQzEzMCAyMDguOTU0IDEzOC45NTQgMjAwIDE1MCAyMDBaIiBmaWxsPSIjOUIxMDNEIi8+CjxwYXRoIGQ9Ik0yMTAgMjgwSDE0MEMxMzguODk1IDI4MCAxMzggMjgwLjg5NSAxMzggMjgyQzEzOCAyODMuMTA1IDEzOC44OTUgMjg0IDE0MCAyODRIMjEwQzIxMS4xMDUgMjg0IDIxMiAyODMuMTA1IDIxMiAyODJDMjEyIDI4MC44OTUgMjExLjEwNSAyODAgMjEwIDI4MFoiIGZpbGw9IiM5QjEwM0QiLz4KPC9zdmc+";
                     }}
-                  />  
+                  />
                 </Link>
 
-                              <div className="mt-2 text-sm font-medium text-gray-800 truncate">
+                <div className="mt-2 text-sm font-medium text-gray-800 truncate">
                   {series.title || series.name}
                 </div>
-                  </div>
-                ):(
-                                // Placeholder for movies without posters
+              </div>
+            ) : (
+              // Placeholder for movies without posters
               <div className="w-full aspect-[3/4.5] bg-gray-200 rounded-lg flex items-center justify-center">
                 <div className="text-gray-400 text-center p-4">
                   <div className="text-2xl mb-2">🎬</div>
                   <div className="text-xs">No Image</div>
                 </div>
               </div>
-                )}
+            )}
 
-                <div className="text-xs text-gray-500 grid grid-cols-2">
-                  {series.first_air_date
-                    ? new Date(series.first_air_date).getFullYear()
-                    : "N/A"}
-                                                    {series.vote_average > 0 && (
-                  <span className="text-xs text-yellow-600 flex items-center">
-                    ⭐ {series.vote_average.toFixed(1)}
-                  </span>
-                  )}
-                </div>
+            <div className="text-xs text-gray-500 grid grid-cols-2">
+              {series.first_air_date
+                ? new Date(series.first_air_date).getFullYear()
+                : "N/A"}
+              {series.vote_average > 0 && (
+                <span className="text-xs text-yellow-600 flex items-center">
+                  ⭐ {series.vote_average.toFixed(1)}
+                </span>
+              )}
+            </div>
           </div>
         ))}
+      </div>
 
-
-                  </div>
-
-                        {loading && (
+      {loading && (
         <div className="flex justify-center items-center mt-8 py-8">
           <MoonLoader color="#374151" loading={loading} size={40} />
         </div>
       )}
 
- {!loading && totalPages > 0 && (
+      {!loading && totalPages > 0 && (
         <div className="flex flex-col items-center my-8 space-y-4">
           <div className="flex items-center space-x-2">
-            <button 
+            <button
               onClick={() => onPages(page - 1)}
               disabled={page === 1}
               className={`px-3 py-1 rounded-lg ${
-                page === 1 
-                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                page === 1
+                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
               }`}
             >
               ←
             </button>
 
             {getPages().map((pageNum) => (
-              <button 
+              <button
                 key={pageNum}
                 onClick={() => onPages(pageNum)}
                 className={`px-3 py-1 rounded-lg ${
-                  pageNum === page 
-                    ? 'bg-blue-600 text-white' 
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  pageNum === page
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
                 {pageNum}
               </button>
             ))}
 
-            <button 
+            <button
               onClick={() => onPages(page + 1)}
               disabled={page === totalPages}
               className={`px-3 py-1 rounded-lg ${
-                page === totalPages 
-                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                page === totalPages
+                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
               }`}
             >
               →
@@ -198,11 +202,10 @@ function Seriess() {
           <div className="text-sm text-gray-500">
             Page {page} of {totalPages}
           </div>
-        <Footers/>
-
+          <Footers />
         </div>
       )}
-      </div>
+    </div>
   );
 }
 
