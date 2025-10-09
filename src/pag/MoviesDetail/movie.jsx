@@ -15,6 +15,8 @@ const MoonLoader = ({ color = "#374151", loading = true, size = 40 }) => (
     ></div>
   )
 
+);
+
 function Movie() {
   const [movieList, setMovieList] = useState([]);
   const [loading, setLoading] = useState(false);
