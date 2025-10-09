@@ -182,16 +182,29 @@ function Home() {
           
           <div>
             <h2 className="text-2xl font-semibold mb-4 px-5 mt-10">Popular Movies</h2>
-            <div className="grid grid-cols-2 xm:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-5">
+            <div className="grid grid-cols-4 xm:grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-6 px-5">
               {Popular.map((movie) => (
                 <div key={movie.id} className="text-center">
                   <Link to={`/movie/${movie.id}`}>
                     <img
-                      className="w-full h-[18rem] object-cover rounded-md"
+                      className="w-full h-auto object-cover rounded-md"
                       src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                       alt={movie.title}
                     />
-                    <p className="text-lg mt-2 font-medium">{movie.title}</p>
+                               <div className="mt-2 text-sm font-medium text-gray-800 truncate">
+              {movie.title}
+            </div>
+
+            
+            <div className="text-xs text-gray-500 grid grid-cols-2">
+              {movie.release_date ? new Date(movie.release_date).getFullYear() : 'N/A'}
+                                          {movie.vote_average > 0 && (
+                  <span className="text-xs text-yellow-600 flex items-center ">
+                    ⭐ {movie.vote_average.toFixed(1)}
+                  </span>
+                  
+                )}
+            </div>
                   </Link>
                 </div>
               ))}
