@@ -28,3 +28,19 @@ react-router-dom	^7.1.1	Client-side routing
 react-slick	^0.30.3	Slider/carousel component
 react-spinners	^0.15.0	Animated loading spinners
 slick-carousel	^1.8.1	CSS/JS dependency for react-slick
+
+🛠️ Installation Guide
+
+Follow these steps to set up the project locally:
+
+1️⃣ Clone the repository
+git clone https://github.com/your-username/project-name.git
+
+2️⃣ Navigate into the project
+cd project-name
+
+3️⃣ Install dependencies
+npm install
+
+4️⃣ Run the development server
+npm start
